@@ -16,7 +16,7 @@
 
     <link href="menubar.css" rel="stylesheet" />
 
-<link type="text/css" rel="stylesheet" href="http://www.temple.edu/sites/temple/files/css/css_bLnrJvSDMMMrixVK0gKebpAOMgS_nCHw7RJsNvIlMsU.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="http://www.temple.edu/sites/temple/files/css/css_bLnrJvSDMMMrixVK0gKebpAOMgS_nCHw7RJsNvIlMsU.css?parameter=1" media="screen" />
 
 
    
@@ -74,8 +74,8 @@
                 </li>
                 <li class="active"><a href="createEvent.aspx">Create Events</a>
                 </li>
-                <li><a href="createTask.aspx">Manage Tasks</a>
-                </li>
+                <%--<li><a href="createTask.aspx">Manage Tasks</a>
+                </li>--%>
                 <li><a href="viewEvent.aspx">View Events</a>
                 </li>
                 <li ><a href="createReport.aspx">Create Report</a>
@@ -163,7 +163,290 @@
                                         </div>
                               </div>
                              </div> 
+                       </div>
+            </div>
+    </div>
+        <%--Categories that they supplied--%>
+<div>
+    <div class ="container">
+        <div class =" row">
+            <%--Event Overview--%>
+        <div class="col-lg-5">
+            <div class ="pannel-group" id="accordion2">
+                <div class="panel panel-default"> 
+                        <div class="panel-heading">
+                             
+                                 <a data-toggle="collapse" data-parent="#accordion2" href="#collapsetwo">Event Overview</a>
+                             
+                        </div>
+                        <div id="collapsetwo" class="panel-collapse collapse out">
+                            <div class="panel-body">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Goal</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Venue</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Event URL</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Fees</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Attendee capactiy</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Pre & Post Event Registration Numbers</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Planning timeline</label>
+                                    </div>
 
+                            </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+
+            <%--Budget--%>
+
+            <div class="col-lg-5">
+            <div class ="pannel-group" id="accordion3">
+                <div class="panel panel-default"> 
+                        <div class="panel-heading">
+                             
+                                 <a data-toggle="collapse" data-parent="#accordion3" href="#collapseThree">Budget</a>
+                             
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse out">
+                            <div class="panel-body">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Anticipated</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Actual</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Overall cost per attendee</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Contra</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Net Profit/Expense</label>
+                                    </div>
+                                
+
+                            </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <%--second row--%>
+
+        <div class="row">
+            <div class="col-lg-5">
+            <div class ="pannel-group" id="accordion4">
+                <div class="panel panel-default"> 
+                        <div class="panel-heading">
+                             
+                                 <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour">Participants / Banner ID #</a>
+                             
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse out">
+                            <div class="panel-body">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Sponsors</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Co-sponsors</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Targeted Audience</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Event staff</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Program Participants</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Alumni Speaker(s)</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Faculty speaker(s)</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Panel members</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Tour operator</label>
+                                    </div>
+                                
+
+                            </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+
+            <%--Marketing panel--%>
+            <div class="col-lg-5">
+            <div class ="pannel-group" id="accordion5">
+                <div class="panel panel-default"> 
+                        <div class="panel-heading">
+                             
+                                 <a data-toggle="collapse" data-parent="#accordion5" href="#collapseFive">Marketing & Communication</a>
+                             
+                        </div>
+                        <div id="collapseFive" class="panel-collapse collapse out">
+                            <div class="panel-body">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Pre-Event correspondence</label>
+                                    </div>
+                                                    <%--sub fields?--%>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Post-Event correspondence</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Email blast</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Event Listing</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Event calendar</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Social Media</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">University Calendar</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Flyers</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Posters</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Postcards</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Electronic display</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Signage</label>
+                                    </div>
+                                
+
+                            </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+
+            </div>
+
+        <%--next row--%>
+        <div class="row">
+            <div class="col-lg-5">
+            <div class ="pannel-group" id="accordion6">
+                <div class="panel panel-default"> 
+                        <div class="panel-heading">
+                             
+                                 <a data-toggle="collapse" data-parent="#accordion6" href="#collapseSix">PreEvent Logistics</a>
+                             
+                        </div>
+                        <div id="collapseSix" class="panel-collapse collapse out">
+                            <div class="panel-body">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Catering</label>
+                                    </div>
+                                                    
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Facilities</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Technology Support</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">A/V</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Decortations</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Photography</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Technology</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Giveaways</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Travel arrangements</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Parking</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Security</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Registrations Items</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Supplies</label>
+                                    </div>
+                                
+                                
+
+                            </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+            <%--post event panel--%>
+            <div class="col-lg-5">
+            <div class ="pannel-group" id="accordion7">
+                <div class="panel panel-default"> 
+                        <div class="panel-heading">
+                             
+                                 <a data-toggle="collapse" data-parent="#accordion7" href="#collapseSeven">Post Event Activities</a>
+                             
+                        </div>
+                        <div id="collapseSeven" class="panel-collapse collapse out">
+                            <div class="panel-body">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Debrief meeting</label>
+                                    </div>
+                                                    
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Notes</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Enter data into Event Manager</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Enter data into Banner</label>
+                                    </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Program Evaluation</label>
+                                    </div>
+                                
+                            </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+            </div>
+</div>
+ </div>
                              
    <%--used for date picker--%> <%--Don't move these block of code. It must be here for it to work--%>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css"/>
@@ -200,7 +483,7 @@
 
                        
              <%--   code for the panel     --%>             
-                   <div class="panel panel-default">
+                   <%--<div class="panel panel-default">
                                 <div class="panel-heading">
                                          
                                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Miscellaneous</a>
@@ -234,17 +517,17 @@
                                         </div>
                        </div>
                        </div>
-            </div> 
+            </div> --%>
 
     <a href="CreateSubEvent.aspx" class="btn btn-primary btn-Sigin" data-toggle="popover" data-placement="right" data-content="Click Next to Create a SubEvent for your Event." title="" data-original-title="Popover on right" style="font-size: large; height: 43px;">
     <div class="text-center">
-        <strong>Next</strong></div>
+        <strong>Add Sub Event</strong></div>
     </a>
                       
   
       
 
-                </div> 
+                
     
    
                       
