@@ -14,9 +14,10 @@
     <link href="Bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="Bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link type="text/css" rel="stylesheet" href="http://www.temple.edu/sites/temple/files/css/css_bLnrJvSDMMMrixVK0gKebpAOMgS_nCHw7RJsNvIlMsU.css" media="screen" />
     <link href="menubar.css" rel="stylesheet" />
    
+    <%--for footer--%>
+    <link type="text/css" rel="stylesheet" href="http://www.temple.edu/sites/temple/files/css/css_OCCCxEXLcOWEYOLZIlp4WFqVS4zcfvLRB6D_bEd9x50.css" media="screen" />
    
     <title>Login Page</title>
 
