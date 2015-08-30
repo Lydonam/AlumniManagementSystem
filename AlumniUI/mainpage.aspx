@@ -7,7 +7,8 @@
 <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
 <link href="menubar.css" rel="stylesheet" />
 
-<link type="text/css" rel="stylesheet" href="http://www.temple.edu/sites/temple/files/css/css_bLnrJvSDMMMrixVK0gKebpAOMgS_nCHw7RJsNvIlMsU.css" media="screen" />
+<%--for footer--%>
+<link type="text/css" rel="stylesheet" href="http://www.temple.edu/sites/temple/files/css/css_OCCCxEXLcOWEYOLZIlp4WFqVS4zcfvLRB6D_bEd9x50.css" media="screen" />
 
 <!-- BOOTSTRAP STYLES-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
@@ -173,8 +174,8 @@
 	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 	    })();
 	</script>
-</div>
-</body><br /><br />
+</body>
+<br /><br />
 
 <%--footer for pages--%>
     <footer id="#footer">
@@ -221,7 +222,6 @@
   </div>
   </div>
   <div class="footer-wrap bottom">
-      <%--<div class="footer navbar-fixed-bottom">--%>
       <div class="region region-footer-bottom">
     
 <div id="block-menu-menu-tertiary-links" class="block block-menu">
@@ -246,6 +246,5 @@
        </div>
 </div>
   </div>
-          <%--</div>--%>
   </div>
 </footer>

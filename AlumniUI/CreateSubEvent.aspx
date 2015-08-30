@@ -17,13 +17,8 @@
      </script>
 
     <%--style sheet reference for footer--%>
-    <link rel="shortcut icon" href="http://www.temple.edu/sites/all/themes/edu/favicon.ico" type="image/vnd.microsoft.icon" />
-    <%--<link type="text/css" rel="stylesheet" href="http://www.temple.edu/sites/temple/files/css/css_pbm0lsQQJ7A7WCCIMgxLho6mI_kBNgznNUWmTWcnfoE.css" media="all" />
-    <link type="text/css" rel="stylesheet" href="http://www.temple.edu/sites/temple/files/css/css_CR2SCSlcchF_V1JZKALtD7MrcD2v0JPHdUDwNYGkQWk.css" media="all" />
-    <link type="text/css" rel="stylesheet" href="http://www.temple.edu/sites/temple/files/css/css_1Z_QIcHNvbuEiRqQcII5sIX9yVOP0oslaKtXcuHG-zw.css" media="all" />--%>
-    <link type="text/css" rel="stylesheet" href="http://www.temple.edu/sites/temple/files/css/css_bLnrJvSDMMMrixVK0gKebpAOMgS_nCHw7RJsNvIlMsU.css?parameter=1" media="screen" />
-    <link type="text/css" rel="stylesheet" href="http://www.temple.edu/sites/temple/files/css/css_f0JINAe-xjdiutTtKaZSZvnJAiYNzR00LfG88yGwIVQ.css" media="print" />
-    <html xmlns="http://www.w3.org/1999/xhtml">
+    <link type="text/css" rel="stylesheet" href="http://www.temple.edu/sites/temple/files/css/css_OCCCxEXLcOWEYOLZIlp4WFqVS4zcfvLRB6D_bEd9x50.css" media="screen" />
+
     <title>Sub Events</title>
     <link rel="stylesheet" href="http://localhost:49255/code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>

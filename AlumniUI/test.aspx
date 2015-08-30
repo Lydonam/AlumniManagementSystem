@@ -6,8 +6,8 @@
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
 <link href="menubar.css" rel="stylesheet" />
-<link type="text/css" rel="stylesheet" href="http://www.temple.edu/sites/temple/files/css/css_bLnrJvSDMMMrixVK0gKebpAOMgS_nCHw7RJsNvIlMsU.css" media="screen" />
-
+<%--style sheet reference for footer--%>
+<link type="text/css" rel="stylesheet" href="http://www.temple.edu/sites/temple/files/css/css_OCCCxEXLcOWEYOLZIlp4WFqVS4zcfvLRB6D_bEd9x50.css" media="screen" />
 
 <link href="css/datepicker.css" rel="stylesheet" />
 <script src="js/bootstrap-datepicker.js"></script>
