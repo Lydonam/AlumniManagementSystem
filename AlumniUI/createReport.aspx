@@ -13,7 +13,7 @@
 
 <%--make things centered--%>
 <style>
-    .center {
+    .center {  
         margin-left:0;
         margin-right:0;
         margin:0 auto;
