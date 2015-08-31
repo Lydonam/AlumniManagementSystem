@@ -106,6 +106,7 @@
     <Content Include="components\jstimezonedetect\LICENCE.txt" />
     <Content Include="components\underscore\underscore-min.js" />
     <Content Include="createEvent.aspx" />
+    <Content Include="createEvent2.aspx" />
     <Content Include="createReport.aspx" />
     <Content Include="CreateSubEvent.aspx" />
     <Content Include="createTask.aspx" />
@@ -188,6 +189,13 @@
     </Compile>
     <Compile Include="createEvent.aspx.designer.cs">
       <DependentUpon>createEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="createEvent2.aspx.cs">
+      <DependentUpon>createEvent2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="createEvent2.aspx.designer.cs">
+      <DependentUpon>createEvent2.aspx</DependentUpon>
     </Compile>
     <Compile Include="createReport.aspx.cs">
       <DependentUpon>createReport.aspx</DependentUpon>

@@ -8,9 +8,14 @@
 
 
 <!DOCTYPE html>
-<link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
+<%--<link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
 <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
-<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />--%>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
@@ -19,119 +24,75 @@
 <%--for footer--%>
 <link type="text/css" rel="stylesheet" href="http://www.temple.edu/sites/temple/files/css/css_OCCCxEXLcOWEYOLZIlp4WFqVS4zcfvLRB6D_bEd9x50.css" media="screen" />
 
+<body>
+    <form id="form1" runat="server">
+        <%--code for menu bar--%>
 
-<style>
-    .center {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .logo {
-        z-index: 1;
-        left: 52px;
-        top: 32px;
-        position: absolute;
-        height: 38px;
-        width: 553px;
-    }
-
-    #form1 {
-        width: 230px;
-        height: 428px;
-        margin-left: 0px;
-        z-index: 1;
-        left: 337px;
-        top: -5px;
-        position: relative;
-    }
-
-    .auto-style1 {
-        font-size: large;
-    }
-
-    .auto-style1 {
-        text-shadow: 0 1px 0 rgba(255, 255, 255, .25);
-        float: left;
-        height: 50px;
-        font-size: 18px;
-        line-height: 20px;
-        padding: 15px;
-    }
-
-    .auto-style3 {
-        text-decoration: underline;
-    }
-</style>
-
-<%--<form id="form1" runat="server">--%>
-<%--code for menu bar--%>
-
-<div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="auto-style1" href="#">Alumni Event Calendar</a>
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
-                <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-            </button>
-        </div>
-        <div class="collapse navbar-collapse navbar-menubuilder">
-            <ul class="nav navbar-nav navbar-left">
-                <li><a href="mainpage.aspx">Home</a>
-                </li>
-                <li class="active"><a href="createEvent.aspx">Create Events</a>
-                </li>
-                <%--<li><a href="createTask.aspx">Manage Tasks</a>
-                </li>--%>
-                <li><a href="viewEvent.aspx">View Events</a>
-                </li>
-                <li><a href="createReport.aspx">Create Report</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-
-<div class="container">
-    
-        <%-- Start of Event Details Block--%>
-        <h4 class="auto-style3">Information About Creating Event</h4>
-        <h4>This page is to Add a New Event. Please fill in these fields below to create a new new event. Then press the Next button to go to the Sub-Event page.</h4>
-
-        <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Event Details</a>
+        <div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="auto-style1" href="#">Alumni Event Calendar</a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
+                        <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
                 </div>
-                <div id="collapseOne" class="panel-collapse collapse in">
-                    <div class="panel-body">
-                        <div class="col-md-12">
-                            <div class="col-sm-3">
+                <div class="collapse navbar-collapse navbar-menubuilder">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="mainpage.aspx">Home</a>
+                        </li>
+                        <li class="active"><a href="createEvent.aspx">Create Events</a>
+                        </li>
+                        <%--<li><a href="createTask.aspx">Manage Tasks</a>
+                </li>--%>
+                        <li><a href="viewEvent.aspx">View Events</a>
+                        </li>
+                        <li><a href="createReport.aspx">Create Report</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <h4 class="auto-style3">Information About Creating Event</h4>
+            <h4>This page is to Add a New Event. Please fill in these fields below to create a new new event. Then press the Next button to go to the Sub-Event page.</h4>
+
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Event Information</a>
+                    </div>
+
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="control-label">Event Name<span style="color: red">*</span></label>
-                                    <input class="form-control" type="text">                                 
+                                    <input class="form-control" type="text">
                                 </div>
                             </div>
-                            <div class="col-sm-3">
-                                <div class="form-group">
-                                    <label class="control-label">Event Owner<span style="color: red">*</span></label>
-                                    <input class="form-control" type="text" />
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="form-group">
-                                    <label class="control-label">Event Start Date<span style="color: red">*</span></label>
-                                    <input class="form-control" type="text" id="datepicker" />
-                                </div>
-                            </div>
-                        
+
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label class="control-label">Event Start Time<span style="color: red">*</span></label>
                                     <input class="form-control" type="text" id="starttimepicker" />
                                 </div>
                             </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label">Event Start Date<span style="color: red">*</span></label>
+                                    <input class="form-control" type="text" id="datepicker" />
+                                </div>
+                            </div>
 
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label">Event Owner<span style="color: red">*</span></label>
+                                    <input class="form-control" type="text" />
+                                </div>
+                            </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label class="control-label">Event End Time<span style="color: red">*</span></label>
@@ -144,11 +105,88 @@
                                     <input class="form-control" type="text" id="datepicker2" />
                                 </div>
                             </div>
-                        
 
-                        <%--Event Overview--%>
-                        <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label">Street Address 1<span style="color: red">*</span></label>
+                                    <input class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label">Street Address 2<span style="color: red">*</span></label>
+                                    <input class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label">Building Name<span style="color: red">*</span></label>
+                                    <input class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label">Room Number<span style="color: red">*</span></label>
+                                    <input class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label">Street Address 2<span style="color: red">*</span></label>
+                                    <input class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label">City<span style="color: red">*</span></label>
+                                    <input class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label">State<span style="color: red">*</span></label>
+                                    <input class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label">Zip Code<span style="color: red">*</span></label>
+                                    <input class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label">Country<span style="color: red">*</span></label>
+                                    <input class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label">Time Zone<span style="color: red">*</span></label>
+                                    <input class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                            </div>
+                            <div class="col-md-4">
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group" id="#eventAccordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#eventAccordion" href="#eventCollapse">Event Details</a>
+                    </div>
+                    <div id="eventCollapse" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <%--Event Overview--%>
+
+                            <div class="col-md-4">
                                 <div class="pannel-group" id="accordion2">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
@@ -194,8 +232,7 @@
                             </div>
 
                             <%--Budget--%>
-
-                            <div class="col-sm-3">
+                            <div class="col-md-4">
                                 <div class="pannel-group" id="accordion3">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
@@ -232,10 +269,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-md-4">
                                 <div class="pannel-group" id="accordion4">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
@@ -290,7 +325,7 @@
                             </div>
 
                             <%--Marketing panel--%>
-                            <div class="col-lg-3">
+                            <div class="col-md-4">
                                 <div class="pannel-group" id="accordion5">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
@@ -356,12 +391,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
 
-                        <%--next row--%>
-                        <div class="row">
-                            <div class="col-lg-3">
+                            <%--next row--%>
+                            <div class="col-md-4">
                                 <div class="pannel-group" id="accordion6">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
@@ -433,7 +466,7 @@
                                 </div>
                             </div>
                             <%--post event panel--%>
-                            <div class="col-lg-3">
+                            <div class="col-md-4">
                                 <div class="pannel-group" id="accordion7">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
@@ -470,55 +503,323 @@
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
-            
             </div>
+
+
+            <%--Adding a Sub Event Panel--%>
+            <div class="pannel-group" id="accordion8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <asp:LinkButton ID="btnAddSubEvent" runat="server" class="glyphicon glyphicon-plus pull-right"></asp:LinkButton>
+                        <a data-toggle="collapse" data-parent="#accordion8" href="#collapseEight">Sub Event</a>
+                    </div>
+                    <div id="collapseEight" class="panel-collapse collapse out">
+                        <div class="panel-body">
+                            <%--Sub Event Detail Panel Starts--%>
+                            <div class="pannel-group" id="accordion9">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion9" href="#collapseNine">Sub Event Details</a>
+                                    </div>
+                                    <div id="collapseNine" class="panel-collapse collapse out">
+                                        <div class="panel-body">
+                                            <div class="col-md-4">
+                                                <label class="control-label">Sub Event Name<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtSubEventName" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="control-label">Start Date<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtStartDate" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="control-label">Start Time<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtStartTime" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="control-label">Registration URL<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtRegistrationUrl" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="control-label">End Date<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtEndDate" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="control-label">End Time<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtEndTime" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <%--Sub Event Detail Panel Ends--%>
+
+                            <%--Sub Event Owner Panel Starts--%>
+                            <div class="pannel-group" id="accordion10">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <asp:LinkButton ID="btnAddAdditionalOwners" runat="server" class="glyphicon glyphicon-plus pull-right"></asp:LinkButton>
+                                        <a data-toggle="collapse" data-parent="#accordion10" href="#collapseTen">Sub Event Owner</a>
+                                    </div>
+                                    <div id="collapseTen" class="panel-collapse collapse out">
+                                        <div class="panel-body">
+                                            <div class="col-md-4">
+                                                <label class="control-label">Owner First Name<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtOwnerFirstName" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="control-label">Owner Last Name<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtOwnerLastName" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="control-label">E-mail<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="control-label">Phone Number<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtPhoneNumber" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <%--Sub Event Owner Panel Ends--%>
+
+                            <%--Sub Event Location Panel Starts--%>
+                            <div class="pannel-group" id="accordion11">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <asp:LinkButton ID="btnAddSubEventLocation" runat="server" class="glyphicon glyphicon-plus pull-right"></asp:LinkButton>
+                                        <a data-toggle="collapse" data-parent="#accordion11" href="#collapseEleven">Sub Event Location</a>
+                                    </div>
+                                    <div id="collapseEleven" class="panel-collapse collapse out">
+                                        <div class="panel-body">
+                                            <div class="col-md-4">
+                                                <label class="control-label">Street Address 1<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtStreetAddress1" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="control-label">Street Address 2<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtStreetAddress2" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="control-label">City<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtCity" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="control-label">State<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtState" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="control-label">Zip Code<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtZipCode" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="control-label">Building Name<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtBuildingName" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="control-label">Room Number<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtRoomNumber" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <%--Sub Event Location Panel Ends--%>
+
+                            <%--Sub Event Sponsor Panel Starts--%>
+                            <div class="pannel-group" id="accordion12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion12" href="#collapseTwelve">Sub Event Sponsors</a>
+                                    </div>
+                                    <div id="collapseTwelve" class="panel-collapse collapse out">
+                                        <div class="panel-body">
+                                            <div class="col-md-4">
+                                                <label class="control-label">Sponsor Name<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtSponsorName" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="control-label">Email<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtSponsorEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label class="control-label">University Partner?<span style="color: red">*</span></label>
+                                                <asp:RadioButtonList ID="rdbSponsorUniversityPartner" runat="server" RepeatDirection="Horizontal">
+                                                    <asp:ListItem>Yes</asp:ListItem>
+                                                    <asp:ListItem>No</asp:ListItem>
+                                                </asp:RadioButtonList>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label class="control-label">Add Sponsor</label><br />
+                                                <asp:LinkButton ID="btnAddSponsor" runat="server" class="glyphicon glyphicon-plus"></asp:LinkButton>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="control-label">Co-Sponsor Name<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtCoSponsorName" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="control-label">Email<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtCoSponsorEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label class="control-label">University Partner?<span style="color: red">*</span></label>
+                                                <asp:RadioButtonList ID="rbnCoSponsorUniversityPartner" runat="server" RepeatDirection="Horizontal">
+                                                    <asp:ListItem>Yes</asp:ListItem>
+                                                    <asp:ListItem>No</asp:ListItem>
+                                                </asp:RadioButtonList>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label class="control-label">Add Co-Sponsor</label><br />
+                                                <asp:LinkButton ID="btnAddCoSponsor" runat="server" class="glyphicon glyphicon-plus"></asp:LinkButton>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <%--Sub Event Sponsor Panel Ends--%>
+
+                            <%--Sub Event Panelist Panel Starts--%>
+                            <div class="pannel-group" id="accordion13">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <asp:LinkButton ID="btnAddPanelist" runat="server" class="glyphicon glyphicon-plus pull-right"></asp:LinkButton>
+                                        <a data-toggle="collapse" data-parent="#accordion13" href="#collapseThirteen">Sub Event Panelists</a>
+                                    </div>
+                                    <div id="collapseThirteen" class="panel-collapse collapse out">
+                                        <div class="panel-body">
+                                            <div class="col-md-4">
+                                                <label class="control-label">First Name<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtPanelistFirstName" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="control-label">Last Name<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtPanelistLastName" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="control-label">Email<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtPanelistEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="control-label">Phone Number<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtPanelistPhoneNumber" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="control-label">Role<span style="color: red">*</span></label>
+                                                <asp:TextBox ID="txtPanelistRole" runat="server" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <%--Sub Event Panelist Panel Ends--%>
+                        </div>
+                    </div>
                 </div>
+            </div>
+
+
+            <%--Adding Task Panel--%>
+            <div class="pannel-group" id="accordion14">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion14" href="#collapseFourteen">Task</a>
+                    </div>
+                    <div id="collapseFourteen" class="panel-collapse collapse out">
+                        <div class="panel-body">
+
+                            <%--Start Panel for Catering--%>
+                            <div class="pannel-group" id="accordion15">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion15" href="#collapseFifteen">Catering</a>
+                                    </div>
+                                    <div id="collapseFifteen" class="panel-collapse collapse out">
+                                        <div class="panel-body">
+                                            <div class="col-md-4">
+                                                <label class="control-label">Order Pizza</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                                <asp:CheckBox ID="chkPizza" runat="server" /><br />
+                                                <label class="control-label">Order Drinks</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+                                                <asp:CheckBox ID="chkDrinks" runat="server" /><br />
+                                                <label class="control-label">Order Tables</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                                <asp:CheckBox ID="chkTables" runat="server" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <%--End Panel For Catering--%>
+
+                            <%--Start Panel for Entertainment--%>
+                            <div class="pannel-group" id="accordion16">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion16" href="#collapseSixteen">Entertainment</a>
+                                    </div>
+                                    <div id="collapseSixteen" class="panel-collapse collapse out">
+                                        <div class="panel-body">
+                                            <div class="col-md-4">
+                                                <label class="control-label">Get Music</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                                <asp:CheckBox ID="CheckBox1" runat="server" /><br />
+                                                <label class="control-label">Contact Guest Speaker</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+                                                <asp:CheckBox ID="CheckBox2" runat="server" /><br />
+                                                <label class="control-label">Get Microphones</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                                <asp:CheckBox ID="CheckBox3" runat="server" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <%--End Panel For Entertainment--%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-</div>
+        <%--div for containor--%>
 
 
 
-<%--used for date picker--%> <%--Don't move these block of code. It must be here for it to work--%>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css" />
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
-<link rel="stylesheet" href="/resources/demos/style.css" />
-<link href="jquery.timepicker.css" rel="stylesheet" />
-<script src="jquery.timepicker.js"></script>
-<script src="jquery.timepicker.min.js"></script>
-<%--script for date picker--%>
-<script>
-    $(function () {
-        $("#datepicker").datepicker();
-    });
+        <%--used for date picker--%> <%--Don't move these block of code. It must be here for it to work--%>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css" />
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+        <link rel="stylesheet" href="/resources/demos/style.css" />
+        <link href="jquery.timepicker.css" rel="stylesheet" />
+        <script src="jquery.timepicker.js"></script>
+        <script src="jquery.timepicker.min.js"></script>
+        <%--script for date picker--%>
+        <script>
+            $(function () {
+                $("#datepicker").datepicker();
+            });
 
-    $(function () {
-        $("#datepicker2").datepicker();
-    });
-</script>
-<%--script for time picker--%>
-<script>
-    $(function () {
-        $('#starttimepicker').timepicker();
-    });
+            $(function () {
+                $("#datepicker2").datepicker();
+            });
+        </script>
+        <%--script for time picker--%>
+        <script>
+            $(function () {
+                $('#starttimepicker').timepicker();
+            });
 
-    $(function () {
-        $('#endtimepicker').timepicker();
-    });
-</script>
-
-
+            $(function () {
+                $('#endtimepicker').timepicker();
+            });
+        </script>
 
 
 
 
-<%--   code for the panel     --%>
-<%--<div class="panel panel-default">
+
+
+        <%--   code for the panel     --%>
+        <%--<div class="panel panel-default">
                                 <div class="panel-heading">
                                          
                                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Miscellaneous</a>
@@ -554,22 +855,23 @@
                        </div>
             </div> --%>
 
-<a href="CreateSubEvent.aspx" class="btn btn-primary btn-Sigin" data-toggle="popover" data-placement="right" data-content="Click Next to Create a SubEvent for your Event." title="" data-original-title="Popover on right" style="font-size: large; height: 43px;">
-    <div class="text-center">
-        <strong>Add Sub Event</strong>
-    </div>
-</a>
+        <a href="CreateSubEvent.aspx" class="btn btn-primary btn-Sigin" data-toggle="popover" data-placement="right" data-content="Click Next to Create a SubEvent for your Event." title="" data-original-title="Popover on right" style="font-size: large; height: 43px;">
+            <div class="text-center">
+                <strong>Add Sub Event</strong>
+            </div>
+        </a>
+
+
+
+
+    </form>
+
+</body>
 
 
 
 
 
-
-
-
-</br>
-   
-   
 <%--footer for pages--%>
 <footer id="#footer">
     <div class="footer-wrap top">
