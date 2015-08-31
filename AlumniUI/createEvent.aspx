@@ -1,10 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="createEvent.aspx.cs" Inherits="AlumniUI.createEvent" %>
 
 
-
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" />
+<html xmlns="http://www.w3.org/1999/xhtml"/>
 
 
 <!DOCTYPE html>
@@ -14,9 +13,13 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
 
-<%--jquery script for country picker--%>
-<script src="bootstrap-formhelpers-countries.js"></script>
-<link href="css/bootstrap-form-helpers.min.css" rel="stylesheet"/>
+<%--JQuery file to use jquery functions--%>
+<script src="jquery-1.11.3.min.js"></script>
+
+<%--jquery script for country, state, timezone picker--%>
+<link href="BootstrapPickerMaster/dist/css/bootstrap-formhelpers.min.css" rel="stylesheet" />
+<script src="BootstrapPickerMaster/dist/js/bootstrap-formhelpers.min.js"></script>
+
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -26,6 +29,35 @@
 
 <%--for footer--%>
 <link type="text/css" rel="stylesheet" href="http://www.temple.edu/sites/temple/files/css/css_OCCCxEXLcOWEYOLZIlp4WFqVS4zcfvLRB6D_bEd9x50.css" media="screen" />
+
+<%--script to add and remove textboxes using checkboxes--%>
+<script>
+$(document).ready(initialize);
+
+function initialize() {
+    $("input#txtGoal").hide();
+    $("input#txtVenue").hide();
+   $(":checkbox").click(countChecked);    
+}
+
+
+function countChecked() {
+    if ($("input#chkGoal").is(':checked')) {
+        $("input#txtGoal").show();                
+    }
+    else {
+        $("input#txtGoal").hide(); 
+    }
+
+    if ($("input#chkVenue").is(':checked')) {
+        $("input#txtVenue").show();
+    }
+    else {
+        $("input#txtVenue").hide();
+    }
+}
+    </script>
+<%--end of script--%>
 
 <body>
     <form id="form1" runat="server">
@@ -80,13 +112,17 @@
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label class="control-label">Event Start Time<span style="color: red">*</span></label>
-                                    <input class="form-control" type="text" id="starttimepicker" />
+                                    <%--<input class="form-control" type="text" id="starttimepicker" />--%>
+                                    <div class="bfh-timepicker" data-mode="12h" id="starttimepicker">
+</div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="control-label">Event Start Date<span style="color: red">*</span></label>
-                                    <input class="form-control" type="text" id="datepicker" />
+                                    <%--<input class="form-control" type="text" id="datepicker" />--%>
+                                    <div class="bfh-datepicker" id="startdatepicker">
+</div>
                                 </div>
                             </div>
 
@@ -99,13 +135,17 @@
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label class="control-label">Event End Time<span style="color: red">*</span></label>
-                                    <input class="form-control" type="text" id="endtimepicker" />
+                                    <%--<input class="form-control" type="text" id="endtimepicker" />--%>
+                                    <div class="bfh-timepicker" data-mode="12h" id="endtimepicker">
+</div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label class="control-label">Event End Date<span style="color: red">*</span></label>
-                                    <input class="form-control" type="text" id="datepicker2" />
+                                    <%--<input class="form-control" type="text" id="datepicker2" />--%>
+                                    <div class="bfh-datepicker" id="enddatepicker">
+</div>
                                 </div>
                             </div>
 
@@ -132,7 +172,8 @@
                                     <label class="control-label">Room Number<span style="color: red">*</span></label>
                                     <asp:TextBox ID="txtRoomNumber" runat="server" CssClass="form-control input-md" TabIndex="1"></asp:TextBox>
                                 </div>
-                            </div>                         
+                            </div>
+                            
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="control-label">City<span style="color: red">*</span></label>
@@ -142,7 +183,8 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="control-label">State<span style="color: red">*</span></label>
-                                    <asp:TextBox ID="txtState" runat="server" CssClass="form-control input-md" TabIndex="1"></asp:TextBox>
+                                    <div class="bfh-selectbox bfh-states" id="txtState" data-country="US" data-state="PA">
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -154,20 +196,26 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="control-label">Country<span style="color: red">*</span></label>
-                                    <select class="form-control bfh-countries" data-country="US"></select>
-                                    <%--<asp:TextBox ID="txtCountry" runat="server" CssClass="form-control input-md" TabIndex="1"></asp:TextBox>--%>
+                                    <%--<select class="form-control bfh-countries" data-country="US"></select>--%>
+                                    <div class="bfh-selectbox bfh-countries" id="txtCountry" data-country="US" data-flags="true">
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="control-label">Time Zone<span style="color: red">*</span></label>
-                                    <asp:TextBox ID="txtTimeZone" runat="server" CssClass="form-control input-md" TabIndex="1"></asp:TextBox>
+                                    <div id="countries_timezones2" class="bfh-selectbox bfh-countries" data-country="US">
+                                    </div>
+    <%-- <br>--%>
+                                    <div class="bfh-selectbox bfh-timezones" id="txttimezone" data-country="countries_timezones2">
+                                    </div>
                                 </div>
                             </div>
+                               
                             <div class="col-md-4">
                             </div>
                             <div class="col-md-4">
-                            </div>
+                            </div> 
 
 
                         </div>
@@ -196,11 +244,15 @@
                                             <div class="panel-body">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Goal</label>
+                                                        <input type="checkbox" id="chkGoal"  value="" />Goal</label>
+                                                    <input id="txtGoal" type="text" />
                                                 </div>
+   
+
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Venue</label>
+                                                        <input type="checkbox" id="chkVenue" value=""/>Venue</label>
+                                                    <input id="txtVenue" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
