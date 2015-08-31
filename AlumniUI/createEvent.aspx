@@ -14,6 +14,9 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
 
+<%--jquery script for country picker--%>
+<script src="bootstrap-formhelpers-countries.js"></script>
+<link href="css/bootstrap-form-helpers.min.css" rel="stylesheet"/>
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -70,7 +73,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="control-label">Event Name<span style="color: red">*</span></label>
-                                    <input class="form-control" type="text">
+                                    <asp:TextBox ID="txtEventName" runat="server" CssClass="form-control input-md" TabIndex="1"></asp:TextBox>
                                 </div>
                             </div>
 
@@ -90,7 +93,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="control-label">Event Owner<span style="color: red">*</span></label>
-                                    <input class="form-control" type="text" />
+                                    <asp:TextBox ID="txtEventOwner" runat="server" CssClass="form-control input-md" TabIndex="1"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-sm-4">
@@ -109,61 +112,56 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="control-label">Street Address 1<span style="color: red">*</span></label>
-                                    <input class="form-control" type="text">
+                                    <asp:TextBox ID="txtStreetAddress1" runat="server" CssClass="form-control input-md" TabIndex="1"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="control-label">Street Address 2<span style="color: red">*</span></label>
-                                    <input class="form-control" type="text">
+                                    <asp:TextBox ID="txtStreetAddress2" runat="server" CssClass="form-control input-md" TabIndex="1"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="control-label">Building Name<span style="color: red">*</span></label>
-                                    <input class="form-control" type="text">
+                                    <asp:TextBox ID="txtBuildingName" runat="server" CssClass="form-control input-md" TabIndex="1"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="control-label">Room Number<span style="color: red">*</span></label>
-                                    <input class="form-control" type="text">
+                                    <asp:TextBox ID="txtRoomNumber" runat="server" CssClass="form-control input-md" TabIndex="1"></asp:TextBox>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label class="control-label">Street Address 2<span style="color: red">*</span></label>
-                                    <input class="form-control" type="text">
-                                </div>
-                            </div>
+                            </div>                         
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="control-label">City<span style="color: red">*</span></label>
-                                    <input class="form-control" type="text">
+                                    <asp:TextBox ID="txtCity" runat="server" CssClass="form-control input-md" TabIndex="1"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="control-label">State<span style="color: red">*</span></label>
-                                    <input class="form-control" type="text">
+                                    <asp:TextBox ID="txtState" runat="server" CssClass="form-control input-md" TabIndex="1"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="control-label">Zip Code<span style="color: red">*</span></label>
-                                    <input class="form-control" type="text">
+                                    <asp:TextBox ID="txtZipCode" runat="server" CssClass="form-control input-md" TabIndex="1"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="control-label">Country<span style="color: red">*</span></label>
-                                    <input class="form-control" type="text">
+                                    <select class="form-control bfh-countries" data-country="US"></select>
+                                    <%--<asp:TextBox ID="txtCountry" runat="server" CssClass="form-control input-md" TabIndex="1"></asp:TextBox>--%>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="control-label">Time Zone<span style="color: red">*</span></label>
-                                    <input class="form-control" type="text">
+                                    <asp:TextBox ID="txtTimeZone" runat="server" CssClass="form-control input-md" TabIndex="1"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -598,31 +596,31 @@
                                         <div class="panel-body">
                                             <div class="col-md-4">
                                                 <label class="control-label">Street Address 1<span style="color: red">*</span></label>
-                                                <asp:TextBox ID="txtStreetAddress1" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:TextBox ID="txtSubStreetAddress1" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="col-md-4">
                                                 <label class="control-label">Street Address 2<span style="color: red">*</span></label>
-                                                <asp:TextBox ID="txtStreetAddress2" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:TextBox ID="txtSubStreetAddress2" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="col-md-4">
                                                 <label class="control-label">City<span style="color: red">*</span></label>
-                                                <asp:TextBox ID="txtCity" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:TextBox ID="txtSubCity" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="col-md-4">
                                                 <label class="control-label">State<span style="color: red">*</span></label>
-                                                <asp:TextBox ID="txtState" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:TextBox ID="txtSubState" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="col-md-4">
                                                 <label class="control-label">Zip Code<span style="color: red">*</span></label>
-                                                <asp:TextBox ID="txtZipCode" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:TextBox ID="txtSubZipCode" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="col-md-4">
                                                 <label class="control-label">Building Name<span style="color: red">*</span></label>
-                                                <asp:TextBox ID="txtBuildingName" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:TextBox ID="txtSubBuildingName" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="col-md-4">
                                                 <label class="control-label">Room Number<span style="color: red">*</span></label>
-                                                <asp:TextBox ID="txtRoomNumber" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:TextBox ID="txtSubRoomNumber" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                         </div>
                                     </div>

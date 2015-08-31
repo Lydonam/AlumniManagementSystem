@@ -78,6 +78,7 @@
     <Content Include="assets\js\morris\morris.js" />
     <Content Include="assets\js\morris\raphael-2.1.0.min.js" />
     <Content Include="authorize.aspx" />
+    <Content Include="bootstrap-formhelpers-countries.js" />
     <Content Include="bootstrap\css\bootstrap-theme.css" />
     <Content Include="bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="bootstrap\css\bootstrap.css" />
