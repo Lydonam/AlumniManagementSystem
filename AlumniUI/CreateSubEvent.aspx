@@ -20,11 +20,11 @@
     <link type="text/css" rel="stylesheet" href="http://www.temple.edu/sites/temple/files/css/css_OCCCxEXLcOWEYOLZIlp4WFqVS4zcfvLRB6D_bEd9x50.css" media="screen" />
 
     <title>Sub Events</title>
-    <link rel="stylesheet" href="http://localhost:49255/code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="http://localhost:49255/code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css"/>
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <ling rel="stylesheet" href="ButtonColor.css" />
+    <link rel="stylesheet" href="/resources/demos/style.css"/>
+    <link rel="stylesheet" href="ButtonColor.css"/>
         
 <script type="text/javascript">
     $(document).ready(function(){
