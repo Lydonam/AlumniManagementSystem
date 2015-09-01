@@ -104,7 +104,7 @@
                                     <tbody>
                                         <tr class="odd gradeX">
                                             <td>Basketball Game</td>
-                                            <td>John Doe</td>
+                                            <td>Tina Vance Knight</td>
                                             <td>March 4th, 2032</td>
                                             <td class="center">
                                                 <asp:Button ID="Button1" runat="server" Text="View" class="btn btn-primary"/>
@@ -115,7 +115,7 @@
                                         </tr>
                                         <tr class="even gradeC">
                                             <td>Alumni party</td>
-                                            <td>Jane Smith</td>
+                                            <td>Steve Hazzard</td>
                                             <td>April</td>
                                             <td class="center">
                                                 <asp:Button ID="Button2" runat="server" Text="View" class="btn btn-primary"/>
@@ -126,14 +126,14 @@
                                         </tr>
                                         <tr class="odd gradeA">
                                             <td>&nbsp;</td>
-                                            <td>John Jacob Jingleheimer Schmidt</td>
+                                            <td>Tina Vance Knight</td>
                                             <td>&nbsp;</td>
                                             <td class="center">&nbsp;</td>
                                             <td class="center">&nbsp;</td>
                                         </tr>
                                         <tr class="even gradeA">
-                                            <td>x</td>
-                                            <td>Me</td>
+                                            <td>Alumni Lunch</td>
+                                            <td>Tina Vance Knight</td>
                                             <td>&nbsp;</td>
                                             <td class="center">&nbsp;</td>
                                             <td class="center">&nbsp;</td>
