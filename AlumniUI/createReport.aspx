@@ -92,6 +92,7 @@
     
 
     <%--grid view for creating report--%>
+<<<<<<< HEAD
     <div style="border: 0px solid #a41e35; width: 1100px; height: 650px" class="center">
         <div class="row">
             <div class="col-md-12">
@@ -152,6 +153,68 @@
                                 </tbody>
                             </table>
                             <div style="border: 0px solid #a41e35; width: 200px; height: auto" class="center">
+=======
+    <div style= "border:0px solid #a41e35;width:1100px;height:650px" class="center">
+     <div class="row" >
+                <div class="col-md-12">
+                    <!-- Advanced Tables -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                             Create A Report
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <th>Title</th>
+                                            <th class="auto-style1">Name</th>
+                                            <th>Date</th>
+                                            <th>Select Event</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd gradeX">
+                                            <td><a href="http://www.alumni.temple.edu?sid=705&amp;gid=1&amp;pgid=6686&amp;cid=10558&amp;ecid=10558&amp;crid=0&amp;calpgid=4447&amp;calcid=6193">Tampa: Phillies Spring Training 2015</a></td>
+                                            <td class="auto-style1">Steve Hazzard</td>
+                                            <td>March 29th, 2015</td>
+                                            <td class="center">
+                                                <asp:CheckBox ID="CheckBox1" runat="server" />
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr class="even gradeC">
+                                            <td>Alumni party</td>
+                                            <td class="auto-style1">Tina Vance Knight</td>
+                                            <td>April</td>
+                                            <td class="center">
+                                                <asp:CheckBox ID="CheckBox2" runat="server" />
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr class="odd gradeA">
+                                            <td>&nbsp;</td>
+                                            <td class="auto-style1">Tina Vance Knight</td>
+                                            <td>&nbsp;</td>
+                                            <td class="center">
+                                                <asp:CheckBox ID="CheckBox3" runat="server" />
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr class="even gradeA">
+                                            <td>&nbsp;</td>
+                                            <td class="auto-style1">&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class="center">
+                                                <asp:CheckBox ID="CheckBox4" runat="server" />
+                                            </td>
+                                            
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div style= "border:0px solid #a41e35;width:200px;height:auto" class="center">
+>>>>>>> colvinc2/master
                                 <%--<div class="row">--%>
                                 <%--<div class="col-sm-2 form-submit">--%>
                                 <asp:button id="Button1" runat="server" text="Create Report" />

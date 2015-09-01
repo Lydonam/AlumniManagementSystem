@@ -256,7 +256,7 @@ function countChecked() {
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Event URL</label>
+                                                        <input type="checkbox" id="chkEventURL" value=""/>Event URL</label>
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
