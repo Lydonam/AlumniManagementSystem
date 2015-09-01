@@ -114,7 +114,7 @@
                                         </tr>
                                         <tr class="even gradeC">
                                             <td>Alumni party</td>
-                                            <td class="auto-style1">Jane Smith</td>
+                                            <td class="auto-style1">Tina Vance Knight</td>
                                             <td>April</td>
                                             <td class="center">
                                                 <asp:CheckBox ID="CheckBox2" runat="server" />
@@ -123,7 +123,7 @@
                                         </tr>
                                         <tr class="odd gradeA">
                                             <td>&nbsp;</td>
-                                            <td class="auto-style1">John Jacob Jingleheimer Schmidt</td>
+                                            <td class="auto-style1">Tina Vance Knight</td>
                                             <td>&nbsp;</td>
                                             <td class="center">
                                                 <asp:CheckBox ID="CheckBox3" runat="server" />
@@ -131,8 +131,8 @@
                                             
                                         </tr>
                                         <tr class="even gradeA">
-                                            <td>x</td>
-                                            <td class="auto-style1">Me</td>
+                                            <td>&nbsp;</td>
+                                            <td class="auto-style1">&nbsp;</td>
                                             <td>&nbsp;</td>
                                             <td class="center">
                                                 <asp:CheckBox ID="CheckBox4" runat="server" />
