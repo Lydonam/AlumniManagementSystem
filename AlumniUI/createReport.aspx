@@ -22,8 +22,7 @@
     .auto-style1 {
         width: 349px;
     }
-
-    </style>
+</style>
 
 <%--code for menu bar--%>
 <form id="form1" runat="server">
@@ -52,38 +51,10 @@
         </div>
     </div>
 
-    <%--    <div style="width: 807px; float: left;">
-        Use the dropdown list to narrow down your search<br />
-        <br />
-        <asp:dropdownlist id="DropDownList1" runat="server">
-        <asp:ListItem>Networking Event</asp:ListItem>
-    </asp:dropdownlist>
-        Event Category<br />
-        <br />
-        <br />
-        Event Owner<br />
-        <asp:dropdownlist id="DropDownList2" runat="server">
-        <asp:ListItem>Steve Hazzard</asp:ListItem>
-        <asp:ListItem>Jacob</asp:ListItem>
-    </asp:dropdownlist>
-        <br />
-        <br />
-        Date<br />
-        <asp:dropdownlist id="DropDownList3" runat="server">
-        <asp:ListItem>March 29th, 2015</asp:ListItem>
-    </asp:dropdownlist>
-        <br />
-        <br />
-        Event<br />
-        <asp:dropdownlist id="DropDownList4" runat="server">
-        <asp:ListItem>Tampa: Phillies Spring Training 2015</asp:ListItem>
-    </asp:dropdownlist>
-    </div>--%>
-
 
     <%--div for dropdown list--%>
     <div style="border: 0px solid #a41e35; width: 848px;" class="center">
-    <asp:label id="lbl" runat="server" text="Event Type"></asp:label>
+        <asp:label id="lbl" runat="server" text="Event Type"></asp:label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:label id="Label1" runat="server" text="Owner"></asp:label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
@@ -106,85 +77,32 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:dropdownlist id="DropDownList8" runat="server">
         <asp:ListItem>Tampa: Phillies Spring Training 2015</asp:ListItem>
     </asp:dropdownlist>
-    &nbsp;</div>
-
-    <br /><br />
-    <%--grid view for creating report--%>
-    <div style="border: 0px solid #a41e35; width: 1100px; height: 650px" class="center">
-        <div class="row">
-            <div class="col-md-12">
-                <!-- Advanced Tables -->
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        Create A Report
-                    </div>
-                    <div class="panel-body">
-                        <div class="table-responsive">
-                            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-                                <thead>
-                                    <tr>
-                                        <th>Title</th>
-                                        <th class="auto-style1">Name</th>
-                                        <th>Date</th>
-                                        <th>Select Event</th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="odd gradeX">
-                                        <td><a href="http://www.alumni.temple.edu?sid=705&amp;gid=1&amp;pgid=6686&amp;cid=10558&amp;ecid=10558&amp;crid=0&amp;calpgid=4447&amp;calcid=6193">Tampa: Phillies Spring Training 2015</a></td>
-                                        <td class="auto-style1">Steve Hazzard</td>
-                                        <td>March 29th, 2015</td>
-                                        <td class="center">
-                                            <asp:checkbox id="CheckBox1" runat="server" />
-                                        </td>
-
-                                    </tr>
-                                    <tr class="even gradeC">
-                                        <td>Alumni party</td>
-                                        <td class="auto-style1">Jane Smith</td>
-                                        <td>April</td>
-                                        <td class="center">
-                                            <asp:checkbox id="CheckBox2" runat="server" />
-                                        </td>
-
-                                    </tr>
-                                    <tr class="odd gradeA">
-                                        <td>&nbsp;</td>
-                                        <td class="auto-style1">John Jacob Jingleheimer Schmidt</td>
-                                        <td>&nbsp;</td>
-                                        <td class="center">
-                                            <asp:checkbox id="CheckBox3" runat="server" />
-                                        </td>
-
-                                    </tr>
-                                    <tr class="even gradeA">
-                                        <td>x</td>
-                                        <td class="auto-style1">Me</td>
-                                        <td>&nbsp;</td>
-                                        <td class="center">
-                                            <asp:checkbox id="CheckBox4" runat="server" />
-                                        </td>
-
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div style="border: 0px solid #a41e35; width: 200px; height: auto" class="center">
-                                <%--<div class="row">--%>
-                                <%--<div class="col-sm-2 form-submit">--%>
-                                <asp:button id="Button1" runat="server" text="Create Report" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+        &nbsp;
     </div>
-    </div></div>
-                    <!--End Advanced Tables -->
+
+    <br />
+    <br />
+
+    <div class="container table-responsive">
+        <br />
+        <br />
+        <asp:gridview id="gdvStudentOut" runat="server" autogeneratecolumns="False" CssClass="table table-striped table-bordered table-condensed">
+                <Columns>
+                    <asp:BoundField HeaderText="Title" />
+                    <asp:BoundField HeaderText="Name" />
+                    <asp:BoundField HeaderText="Date" />
+
+                    <asp:TemplateField HeaderText="Select Event">
+                        <ItemTemplate>
+                            <asp:CheckBox ID="CheckBox5" runat="server" />
+                        </ItemTemplate>
+                       
+                    </asp:TemplateField>
+                </Columns>
+            </asp:gridview>
+    </div>
 </form>
-</html>
+
 <%--footer for pages--%>
 <footer id="#footer">
     <div class="footer-wrap top">
