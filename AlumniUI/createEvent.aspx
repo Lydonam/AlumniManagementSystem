@@ -59,6 +59,32 @@
         $("input#txtFacultySpeaker").hide();
         $("input#txtPanelMember").hide();
         $("input#txtTourOperator").hide();
+        $("input#txtPreEventCorr").hide();
+        $("input#txtPostEventCorr").hide();
+        $("input#txtEmailBlast").hide();
+        $("input#txtEventListing").hide();
+        $("input#txtSocialMedia").hide();
+        $("input#txtFlyers").hide();
+        $("input#txtPosters").hide();
+        $("input#txtPostcards").hide();
+        $("input#txtElectronicDisplay").hide();
+        $("input#txtSignage").hide();
+        $("input#txtTechnologySupport").hide();
+        $("input#txtAudioVideo").hide();
+        $("input#txtDecorations").hide();
+        $("input#txtPhotography").hide();
+        $("input#txtTechnology").hide();
+        $("input#txtGiveaway").hide();
+        $("input#txtTravelArrangements").hide();
+        $("input#txtParking").hide();
+        $("input#txtSecurity").hide();
+        $("input#txtRegistrationItem").hide();
+        $("input#txtSupplies").hide();
+        $("input#txtDebriefMeeting").hide();
+        $("input#txtNotes").hide();
+        $("input#txtInputManager").hide();
+        $("input#txtInputBanner").hide();
+        $("input#txtProgramEvaluation").hide();
         $(":checkbox").click(countChecked);
     }
 
@@ -202,6 +228,162 @@
         }
         else {
             $("input#txtTourOperator").hide();
+        }
+        if ($("input#chkPreEventCorr").is(':checked')) {
+            $("input#txtPreEventCorr").show();
+        }
+        else {
+            $("input#txtPreEventCorr").hide();
+        }
+        if ($("input#chkPostEventCorr").is(':checked')) {
+            $("input#txtPostEventCorr").show();
+        }
+        else {
+            $("input#txtPostEventCorr").hide();
+        }
+        if ($("input#chkEmailBlast").is(':checked')) {
+            $("input#txtEmailBlast").show();
+        }
+        else {
+            $("input#txtEmailBlast").hide();
+        }
+        if ($("input#chkEventListing").is(':checked')) {
+            $("input#txtEventListing").show();
+        }
+        else {
+            $("input#txtEventListing").hide();
+        }
+        if ($("input#chkSocialMedia").is(':checked')) {
+            $("input#txtSocialMedia").show();
+        }
+        else {
+            $("input#txtSocialMedia").hide();
+        }
+        if ($("input#chkFlyers").is(':checked')) {
+            $("input#txtFlyers").show();
+        }
+        else {
+            $("input#txtFlyers").hide();
+        }
+        if ($("input#chkPosters").is(':checked')) {
+            $("input#txtPosters").show();
+        }
+        else {
+            $("input#txtPosters").hide();
+        }
+        if ($("input#chkPostcards").is(':checked')) {
+            $("input#txtPostcards").show();
+        }
+        else {
+            $("input#txtPostcards").hide();
+        }
+        if ($("input#chkElectronicDisplay").is(':checked')) {
+            $("input#txtElectronicDisplay").show();
+        }
+        else {
+            $("input#txtElectronicDisplay").hide();
+        }
+        if ($("input#chkSignage").is(':checked')) {
+            $("input#txtSignage").show();
+        }
+        else {
+            $("input#txtSignage").hide();
+        }
+        if ($("input#chkTechnologySupport").is(':checked')) {
+            $("input#txtTechnologySupport").show();
+        }
+        else {
+            $("input#txtTechnologySupport").hide();
+        }
+        if ($("input#chkAudioVideo").is(':checked')) {
+            $("input#txtAudioVideo").show();
+        }
+        else {
+            $("input#txtAudioVideo").hide();
+        }
+        if ($("input#chkDecorations").is(':checked')) {
+            $("input#txtDecorations").show();
+        }
+        else {
+            $("input#txtDecorations").hide();
+        }
+        if ($("input#chkPhotography").is(':checked')) {
+            $("input#txtPhotography").show();
+        }
+        else {
+            $("input#txtPhotography").hide();
+        }
+        if ($("input#chkTechnology").is(':checked')) {
+            $("input#txtTechnology").show();
+        }
+        else {
+            $("input#txtTechnology").hide();
+        }
+        if ($("input#chkGiveaway").is(':checked')) {
+            $("input#txtGiveaway").show();
+        }
+        else {
+            $("input#txtGiveaway").hide();
+        }
+        if ($("input#chkTravelArrangements").is(':checked')) {
+            $("input#txtTravelArrangements").show();
+        }
+        else {
+            $("input#txtTravelArrangements").hide();
+        }
+        if ($("input#chkParking").is(':checked')) {
+            $("input#txtParking").show();
+        }
+        else {
+            $("input#txtParking").hide();
+        }
+        if ($("input#chkSecurity").is(':checked')) {
+            $("input#txtSecurity").show();
+        }
+        else {
+            $("input#txtSecurity").hide();
+        }
+        if ($("input#chkRegistrationItem").is(':checked')) {
+            $("input#txtRegistrationItem").show();
+        }
+        else {
+            $("input#txtRegistrationItem").hide();
+        }
+        if ($("input#chkSupplies").is(':checked')) {
+            $("input#txtSupplies").show();
+        }
+        else {
+            $("input#txtSupplies").hide();
+        }
+        if ($("input#chkDebriefMeeting").is(':checked')) {
+            $("input#txtDebriefMeeting").show();
+        }
+        else {
+            $("input#txtDebriefMeeting").hide();
+        }
+        if ($("input#chkNotes").is(':checked')) {
+            $("input#txtNotes").show();
+        }
+        else {
+            $("input#txtNotes").hide();
+        }
+        if ($("input#chkInputManager").is(':checked')) {
+            $("input#txtInputManager").show();
+        }
+        else {
+            $("input#txtInputManager").hide();
+        }
+        if ($("input#chkInputBanner").is(':checked')) {
+            $("input#txtInputBanner").show();
+        }
+        else {
+            $("input#txtInputBanner").hide();
+        }
+        if ($("input#chkProgramEvaluation").is(':checked')) {
+            $("input#txtProgramEvaluation").show();
+        }
+        else {
+            $("input#txtProgramEvaluation").hide();
         }
     }
 </script>
@@ -584,52 +766,55 @@
                                             <div class="panel-body">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Pre-Event correspondence</label>
+                                                        <input type="checkbox" id="chkPreEventCorr" value=""/>Pre-Event correspondence</label>
+                                                    <input id="txtPreEventCorr" type="text" />
                                                 </div>
                                                 <%--sub fields?--%>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Post-Event correspondence</label>
+                                                        <input type="checkbox" id="chkPostEventCorr" value=""/>Post-Event correspondence</label>
+                                                    <input id="txtPostEventCorr" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Email blast</label>
+                                                        <input type="checkbox" id="chkEmailBlast" value=""/>Email blast</label>
+                                                    <input id="txtEmailBlast" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Event Listing</label>
+                                                        <input type="checkbox" id="chkEventListing" value=""/>Event Listing</label>
+                                                    <input id="txtEventListing" type="text" />
+                                                </div>
+                                              
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" id="chkSocialMedia" value=""/>Social Media</label>
+                                                    <input id="txtSocialMedia" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Event calendar</label>
+                                                        <input type="checkbox" id="chkFlyers" value=""/>Flyers</label>
+                                                    <input id="txtFlyers" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Social Media</label>
+                                                        <input type="checkbox" id="chkPosters" value=""/>Posters</label>
+                                                    <input id="txtPosters" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">University Calendar</label>
+                                                        <input type="checkbox" id="chkPostcards" value=""/>Postcards</label>
+                                                    <input id="txtPostcards" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Flyers</label>
+                                                        <input type="checkbox" id="chkElectronicDisplay" value=""/>Electronic display</label>
+                                                    <input id="txtElectronicDisplay" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Posters</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" value="">Postcards</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" value="">Electronic display</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" value="">Signage</label>
+                                                        <input type="checkbox" id="chkSignage" value=""/>Signage</label>
+                                                    <input id="txtSignage" type="text" />
                                                 </div>
 
 
@@ -653,56 +838,58 @@
                                             <div class="panel-body">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Catering</label>
-                                                </div>
-
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" value="">Facilities</label>
+                                                        <input type="checkbox" id="chkTechnologySupport" value=""/>Technology Support</label>
+                                                    <input id="txtTechnologySupport" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Technology Support</label>
+                                                        <input type="checkbox" id="chkAudioVideo" value=""/>Audio/Video</label>
+                                                    <input id="txtAudioVideo" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">A/V</label>
+                                                        <input type="checkbox" id="chkDecorations" value=""/>Decortations</label>
+                                                    <input id="txtDecorations" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Decortations</label>
+                                                        <input type="checkbox" id="chkPhotography" value=""/>Photography</label>
+                                                    <input id="txtPhotography" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Photography</label>
+                                                        <input type="checkbox" id="chkTechnology" value=""/>Technology</label>
+                                                    <input id="txtTechnology" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Technology</label>
+                                                        <input type="checkbox" id="chkGiveaway" value=""/>Giveaways</label>
+                                                    <input id="txtGiveaway" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Giveaways</label>
+                                                        <input type="checkbox" id="chkTravelArrangements" value=""/>Travel Arrangements</label>
+                                                    <input id="txtTravelArrangements" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Travel arrangements</label>
+                                                        <input type="checkbox" id="chkParking" value=""/>Parking</label>
+                                                    <input id="txtParking" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Parking</label>
+                                                        <input type="checkbox" id="chkSecurity" value=""/>Security</label>
+                                                    <input id="txtSecurity" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Security</label>
+                                                        <input type="checkbox" id="chkRegistrationItem" value=""/>Registrations Items</label>
+                                                    <input id="txtRegistrationItem" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Registrations Items</label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" value="">Supplies</label>
+                                                        <input type="checkbox" id="chkSupplies" value=""/>Supplies</label>
+                                                    <input id="txtSupplies" type="text" />
                                                 </div>
 
 
@@ -725,24 +912,29 @@
                                             <div class="panel-body">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Debrief meeting</label>
+                                                        <input type="checkbox" id="chkDebriefMeeting" value=""/>Debrief meeting</label>
+                                                    <input id="txtDebriefMeeting" type="text" />
                                                 </div>
 
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Notes</label>
+                                                        <input type="checkbox" id="chkNotes" value=""/>Notes</label>
+                                                    <input id="txtNotes" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Enter data into Event Manager</label>
+                                                        <input type="checkbox" id="chkInputManager" value=""/>Enter data into Event Manager</label>
+                                                    <input id="txtInputManager" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Enter data into Banner</label>
+                                                        <input type="checkbox" id="chkInputBanner" value=""/>Enter data into Banner</label>
+                                                    <input id="txtInputBanner" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Program Evaluation</label>
+                                                        <input type="checkbox" id="chkProgramEvaluation" value=""/>Program Evaluation</label>
+                                                    <input id="txtProgramEvaluation" type="text" />
                                                 </div>
 
                                             </div>
