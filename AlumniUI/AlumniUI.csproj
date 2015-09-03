@@ -183,7 +183,6 @@
     <Content Include="components\underscore\underscore-min.js" />
     <Content Include="createEvent.aspx" />
     <Content Include="createReport.aspx" />
-    <Content Include="createReportNew.aspx" />
     <Content Include="CreateSubEvent.aspx" />
     <Content Include="createTask.aspx" />
     <Content Include="cssCalendar\calendar.css" />
@@ -250,7 +249,6 @@
     <Content Include="tmpls\year-month.html" />
     <Content Include="tmpls\year.html" />
     <Content Include="viewEvent.aspx" />
-    <Content Include="viewEventNew.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -274,13 +272,6 @@
     </Compile>
     <Compile Include="createReport.aspx.designer.cs">
       <DependentUpon>createReport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="createReportNew.aspx.cs">
-      <DependentUpon>createReportNew.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="createReportNew.aspx.designer.cs">
-      <DependentUpon>createReportNew.aspx</DependentUpon>
     </Compile>
     <Compile Include="CreateSubEvent.aspx.cs">
       <DependentUpon>CreateSubEvent.aspx</DependentUpon>
@@ -338,13 +329,6 @@
     </Compile>
     <Compile Include="viewEvent.aspx.designer.cs">
       <DependentUpon>viewEvent.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="viewEventNew.aspx.cs">
-      <DependentUpon>viewEventNew.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="viewEventNew.aspx.designer.cs">
-      <DependentUpon>viewEventNew.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
