@@ -20,6 +20,13 @@
 <link href="BootstrapPickerMaster/dist/css/bootstrap-formhelpers.min.css" rel="stylesheet" />
 <script src="BootstrapPickerMaster/dist/js/bootstrap-formhelpers.min.js"></script>
 
+<%--Script for ToolTips--%>
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -37,6 +44,28 @@
     function initialize() {
         $("input#txtGoal").hide();
         $("input#txtVenue").hide();
+        $("input#txtEventURL").hide();
+        $("input#txtFees").hide();
+        $("input#txtAttendeeCapacity").hide();
+        $("input#txtPreRegistrationNumber").hide();
+        $("input#txtPostRegistrationNumber").hide();
+        $("input#txtPlanningTimeline").hide();
+        $("input#txtBudget").hide();
+        $("input#txtAnticipatedAttendee").hide();
+        $("input#txtActualAttendee").hide();
+        $("input#txtCostPerAttendee").hide();
+        $("input#txtContract").hide();
+        $("input#txtNetProfit").hide();
+        $("input#txtNetExpense").hide();
+        $("input#txtSponsor").hide();
+        $("input#txtCoSponsor").hide();
+        $("input#txtTargetAudience").hide();
+        $("input#txtEventStaff").hide();
+        $("input#txtProgramParticipant").hide();
+        $("input#txtAlumniSpeaker").hide();
+        $("input#txtFacultySpeaker").hide();
+        $("input#txtPanelMember").hide();
+        $("input#txtTourOperator").hide();
         $(":checkbox").click(countChecked);
     }
 
@@ -54,6 +83,132 @@
         }
         else {
             $("input#txtVenue").hide();
+        }
+        if ($("input#chkEventURL").is(':checked')) {
+            $("input#txtEventURL").show();
+        }
+        else {
+            $("input#txtEventURL").hide();
+        }
+        if ($("input#chkFees").is(':checked')) {
+            $("input#txtFees").show();
+        }
+        else {
+            $("input#txtFees").hide();
+        }
+        if ($("input#chkAttendeeCapacity").is(':checked')) {
+            $("input#txtAttendeeCapacity").show();
+        }
+        else {
+            $("input#txtAttendeeCapacity").hide();
+        }
+        if ($("input#chkPreRegistrationNumber").is(':checked')) {
+            $("input#txtPreRegistrationNumber").show();
+        }
+        else {
+            $("input#txtPreRegistrationNumber").hide();
+        }
+        if ($("input#chkPostRegistrationNumber").is(':checked')) {
+            $("input#txtPostRegistrationNumber").show();
+        }
+        else {
+            $("input#txtPostRegistrationNumber").hide();
+        }
+        if ($("input#chkPlanningTimeline").is(':checked')) {
+            $("input#txtPlanningTimeline").show();
+        }
+        else {
+            $("input#txtPlanningTimeline").hide();
+        }
+        if ($("input#chkAnticipatedAttendee").is(':checked')) {
+            $("input#txtAnticipatedAttendee").show();
+        }
+        else {
+            $("input#txtAnticipatedAttendee").hide();
+        }
+        if ($("input#chkActualAttendee").is(':checked')) {
+            $("input#txtActualAttendee").show();
+        }
+        else {
+            $("input#txtActualAttendee").hide();
+        }
+        if ($("input#chkCostPerAttendee").is(':checked')) {
+            $("input#txtCostPerAttendee").show();
+        }
+        else {
+            $("input#txtCostPerAttendee").hide();
+        }
+        if ($("input#chkContract").is(':checked')) {
+            $("input#txtContract").show();
+        }
+        else {
+            $("input#txtContract").hide();
+        }
+        if ($("input#chkNetProfit").is(':checked')) {
+            $("input#txtNetProfit").show();
+        }
+        else {
+            $("input#txtNetProfit").hide();
+        }
+        if ($("input#chkNetExpense").is(':checked')) {
+            $("input#txtNetExpense").show();
+        }
+        else {
+            $("input#txtNetExpense").hide();
+        }
+        if ($("input#chkSponsor").is(':checked')) {
+            $("input#txtSponsor").show();
+        }
+        else {
+            $("input#txtSponsor").hide();
+        }
+        if ($("input#chkCoSponsor").is(':checked')) {
+            $("input#txtCoSponsor").show();
+        }
+        else {
+            $("input#txtCoSponsor").hide();
+        }
+        if ($("input#chkTargetAudience").is(':checked')) {
+            $("input#txtTargetAudience").show();
+        }
+        else {
+            $("input#txtTargetAudience").hide();
+        }
+        if ($("input#chkEventStaff").is(':checked')) {
+            $("input#txtEventStaff").show();
+        }
+        else {
+            $("input#txtEventStaff").hide();
+        }
+        if ($("input#chkProgramParticipant").is(':checked')) {
+            $("input#txtProgramParticipant").show();
+        }
+        else {
+            $("input#txtProgramParticipant").hide();
+        }
+        if ($("input#chkAlumniSpeaker").is(':checked')) {
+            $("input#txtAlumniSpeaker").show();
+        }
+        else {
+            $("input#txtAlumniSpeaker").hide();
+        }
+        if ($("input#chkFacultySpeaker").is(':checked')) {
+            $("input#txtFacultySpeaker").show();
+        }
+        else {
+            $("input#txtFacultySpeaker").hide();
+        }
+        if ($("input#chkPanelMember").is(':checked')) {
+            $("input#txtPanelMember").show();
+        }
+        else {
+            $("input#txtPanelMember").hide();
+        }
+        if ($("input#chkTourOperator").is(':checked')) {
+            $("input#txtTourOperator").show();
+        }
+        else {
+            $("input#txtTourOperator").hide();
         }
     }
 </script>
@@ -87,7 +242,7 @@
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="auto-style1" href="#">Alumni Event Calendar</a>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
+                    <button type="button" class="-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
                         <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
                 </div>
@@ -116,7 +271,7 @@
             <div class="panel-group" id="accordion">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Event Information</a>
+                        <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion" href="#collapseOne">Event Information</a>
                     </div>
 
                     <div id="collapseOne" class="panel-collapse collapse in">
@@ -246,7 +401,7 @@
             <div class="panel-group" id="#eventAccordion">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <a data-toggle="collapse" data-parent="#eventAccordion" href="#eventCollapse">Event Details</a>
+                        <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#eventAccordion" href="#eventCollapse">Event Details</a>
                     </div>
                     <div id="eventCollapse" class="panel-collapse collapse in">
                         <div class="panel-body">
@@ -257,7 +412,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
 
-                                            <a data-toggle="collapse" data-parent="#accordion2" href="#collapsetwo">Event Overview</a>
+                                            <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion2" href="#collapsetwo">Event Overview</a>
 
                                         </div>
                                         <div id="collapsetwo" class="panel-collapse collapse out">
@@ -277,22 +432,32 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input type="checkbox" id="chkEventURL" value="" />Event URL</label>
+                                                    <input id="txtEventURL" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Fees</label>
+                                                        <input type="checkbox" id="chkFees" value=""/>Fees</label>
+                                                    <input id="txtFees" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Attendee capactiy</label>
+                                                        <input type="checkbox" id="chkAttendeeCapacity" value=""/>Attendee capactiy</label>
+                                                    <input id="txtAttendeeCapacity" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Pre & Post Event Registration Numbers</label>
+                                                        <input type="checkbox" id="chkPreRegistrationNumber" value=""/>Pre Event Registration Number</label>
+                                                    <input id="txtPreRegistrationNumber" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Planning timeline</label>
+                                                        <input type="checkbox" id="chkPostRegistrationNumber" value=""/>Post Event Registration Number</label>
+                                                    <input id="txtPostRegistrationNumber" type="text" />
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" id="chkPlanningTimeline" value=""/>Planning timeline</label>
+                                                    <input id="txtPlanningTimeline" type="text" />
                                                 </div>
 
                                             </div>
@@ -301,36 +466,46 @@
                                 </div>
                             </div>
 
-                            <%--Budget--%>
+                            <%--Budget Panel--%>
                             <div class="col-md-4">
                                 <div class="pannel-group" id="accordion3">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
 
-                                            <a data-toggle="collapse" data-parent="#accordion3" href="#collapseThree">Budget</a>
+                                            <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion3" href="#collapseThree">Budget</a>
 
                                         </div>
                                         <div id="collapseThree" class="panel-collapse collapse out">
                                             <div class="panel-body">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Anticipated</label>
+                                                        <input type="checkbox" id="chkAnticipatedAttendee" value=""/>Anticipated Attendee</label>
+                                                    <input id="txtAnticipatedAttendee" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Actual</label>
+                                                        <input type="checkbox" id="chkActualAttendee" value=""/>Actual Attendee</label>
+                                                    <input id="txtActualAttendee" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Overall cost per attendee</label>
+                                                        <input type="checkbox" id="chkCostPerAttendee" value=""/>Overall cost per attendee</label>
+                                                    <input id="txtCostPerAttendee" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Contra</label>
+                                                        <input type="checkbox" id="chkContract" value=""/>Contract</label>
+                                                    <input id="txtContract" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Net Profit/Expense</label>
+                                                        <input type="checkbox" id="chkNetProfit" value=""/>Net Profit</label>
+                                                    <input id="txtNetProfit" type="text" />
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" id="chkNetExpense" value=""/>Net Expense</label>
+                                                    <input id="txtNetExpense" type="text" />
                                                 </div>
 
 
@@ -345,46 +520,55 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
 
-                                            <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour">Participants / Banner ID #</a>
+                                            <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion4" href="#collapseFour">Participants / Banner ID #</a>
 
                                         </div>
                                         <div id="collapseFour" class="panel-collapse collapse out">
                                             <div class="panel-body">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Sponsors</label>
+                                                        <input type="checkbox" id="chkSponsor" value=""/>Sponsor</label>
+                                                    <input id="txtSponsor" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Co-sponsors</label>
+                                                        <input type="checkbox" id="chkCoSponsor" value=""/>Co-Sponsors</label>
+                                                    <input id="txtCoSponsor" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Targeted Audience</label>
+                                                        <input type="checkbox" id="chkTargetAudience" value=""/>Targeted Audience</label>
+                                                    <input id="txtTargetAudience" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Event staff</label>
+                                                        <input type="checkbox" id="chkEventStaff" value=""/>Event Staff</label>
+                                                    <input id="txtEventStaff" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Program Participants</label>
+                                                        <input type="checkbox" id="chkProgramParticipant" value=""/>Program Participant</label>
+                                                    <input id="txtProgramParticipant" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Alumni Speaker(s)</label>
+                                                        <input type="checkbox" id="chkAlumniSpeaker" value=""/>Alumni Speaker(s)</label>
+                                                    <input id="txtAlumniSpeaker" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Faculty speaker(s)</label>
+                                                        <input type="checkbox" id="chkFacultySpeaker" value=""/>Faculty Speaker(s)</label>
+                                                    <input id="txtFacultySpeaker" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Panel members</label>
+                                                        <input type="checkbox" id="chkPanelMember" value=""/>Panel Member(s)</label>
+                                                    <input id="txtPanelMember" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Tour operator</label>
+                                                        <input type="checkbox" id="chkTourOperator" value=""/>Tour Operator</label>
+                                                    <input id="txtTourOperator" type="text" />
                                                 </div>
 
 
@@ -400,7 +584,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
 
-                                            <a data-toggle="collapse" data-parent="#accordion5" href="#collapseFive">Marketing & Communication</a>
+                                            <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion5" href="#collapseFive">Marketing & Communication</a>
 
                                         </div>
                                         <div id="collapseFive" class="panel-collapse collapse out">
@@ -469,7 +653,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
 
-                                            <a data-toggle="collapse" data-parent="#accordion6" href="#collapseSix">PreEvent Logistics</a>
+                                            <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion6" href="#collapseSix">PreEvent Logistics</a>
 
                                         </div>
                                         <div id="collapseSix" class="panel-collapse collapse out">
@@ -541,7 +725,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
 
-                                            <a data-toggle="collapse" data-parent="#accordion7" href="#collapseSeven">Post Event Activities</a>
+                                            <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion7" href="#collapseSeven">Post Event Activities</a>
 
                                         </div>
                                         <div id="collapseSeven" class="panel-collapse collapse out">
@@ -588,7 +772,7 @@
                         <div id="minusPanel" class="glyphicon glyphicon-minus pull-right" style="cursor: pointer"></div>
                         <div id="addPanel" class="glyphicon glyphicon-plus pull-right" style="cursor: pointer"></div>
                         <%--<button class="btn btn-lg btn-primary btn-add-panel"><i class="glyphicon glyphicon-plus pull-right"></i></button>--%>
-                        <a data-toggle="collapse" data-parent="#accordion8" href="#collapseEight">Sub Event</a>
+                        <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion8" href="#collapseEight">Sub Event</a>
                     </div>
                     <div id="collapseEight" class="panel-collapse collapse out">
                         <div class="panel-body">
@@ -596,7 +780,7 @@
                             <div class="pannel-group" id="accordion9">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                        <a data-toggle="collapse" data-parent="#accordion9" href="#collapseNine">Sub Event Details</a>
+                                        <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion9" href="#collapseNine">Sub Event Details</a>
                                     </div>
                                     <div id="collapseNine" class="panel-collapse collapse out">
                                         <div class="panel-body">
@@ -636,7 +820,7 @@
                                     <span class="glyphicon glyphicon-minus pull-right "></span>
 
                                     <h4 class="panel-title">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion8" href="#collapseThree">Collapsible Group Item #2 (template panel)
+                                        <a class="accordion-toggle" data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion8" href="#collapseThree">Collapsible Group Item #2 (template panel)
                                         </a>
                                     </h4>
 
@@ -653,7 +837,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <asp:LinkButton ID="btnAddAdditionalOwners" runat="server" class="glyphicon glyphicon-plus pull-right"></asp:LinkButton>
-                                    <a data-toggle="collapse" data-parent="#accordion10" href="#collapseTen">Sub Event Owner</a>
+                                    <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion10" href="#collapseTen">Sub Event Owner</a>
                                 </div>
                                 <div id="collapseTen" class="panel-collapse collapse out">
                                     <div class="panel-body">
@@ -684,7 +868,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <asp:LinkButton ID="btnAddSubEventLocation" runat="server" class="glyphicon glyphicon-plus pull-right"></asp:LinkButton>
-                                    <a data-toggle="collapse" data-parent="#accordion11" href="#collapseEleven">Sub Event Location</a>
+                                    <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion11" href="#collapseEleven">Sub Event Location</a>
                                 </div>
                                 <div id="collapseEleven" class="panel-collapse collapse out">
                                     <div class="panel-body">
@@ -726,7 +910,7 @@
                         <div class="pannel-group" id="accordion12">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <a data-toggle="collapse" data-parent="#accordion12" href="#collapseTwelve">Sub Event Sponsors</a>
+                                    <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion12" href="#collapseTwelve">Sub Event Sponsors</a>
                                 </div>
                                 <div id="collapseTwelve" class="panel-collapse collapse out">
                                     <div class="panel-body">
@@ -779,7 +963,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <asp:LinkButton ID="btnAddPanelist" runat="server" class="glyphicon glyphicon-plus pull-right"></asp:LinkButton>
-                                    <a data-toggle="collapse" data-parent="#accordion13" href="#collapseThirteen">Sub Event Panelists</a>
+                                    <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion13" href="#collapseThirteen">Sub Event Panelists</a>
                                 </div>
                                 <div id="collapseThirteen" class="panel-collapse collapse out">
                                     <div class="panel-body">
@@ -818,7 +1002,7 @@
         <div class="pannel-group" id="accordion14">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <a data-toggle="collapse" data-parent="#accordion14" href="#collapseFourteen">Task</a>
+                    <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion14" href="#collapseFourteen">Task</a>
                 </div>
                 <div id="collapseFourteen" class="panel-collapse collapse out">
                     <div class="panel-body">
@@ -827,7 +1011,7 @@
                         <div class="pannel-group" id="accordion15">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <a data-toggle="collapse" data-parent="#accordion15" href="#collapseFifteen">Catering</a>
+                                    <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion15" href="#collapseFifteen">Catering</a>
                                 </div>
                                 <div id="collapseFifteen" class="panel-collapse collapse out">
                                     <div class="panel-body">
@@ -849,7 +1033,7 @@
                         <div class="pannel-group" id="accordion16">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <a data-toggle="collapse" data-parent="#accordion16" href="#collapseSixteen">Entertainment</a>
+                                    <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion16" href="#collapseSixteen">Entertainment</a>
                                 </div>
                                 <div id="collapseSixteen" class="panel-collapse collapse out">
                                     <div class="panel-body">
