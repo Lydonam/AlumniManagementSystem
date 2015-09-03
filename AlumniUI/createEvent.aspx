@@ -37,6 +37,28 @@
     function initialize() {
         $("input#txtGoal").hide();
         $("input#txtVenue").hide();
+        $("input#txtEventURL").hide();
+        $("input#txtFees").hide();
+        $("input#txtAttendeeCapacity").hide();
+        $("input#txtPreRegistrationNumber").hide();
+        $("input#txtPostRegistrationNumber").hide();
+        $("input#txtPlanningTimeline").hide();
+        $("input#txtBudget").hide();
+        $("input#txtAnticipatedAttendee").hide();
+        $("input#txtActualAttendee").hide();
+        $("input#txtCostPerAttendee").hide();
+        $("input#txtContract").hide();
+        $("input#txtNetProfit").hide();
+        $("input#txtNetExpense").hide();
+        $("input#txtSponsor").hide();
+        $("input#txtCoSponsor").hide();
+        $("input#txtTargetAudience").hide();
+        $("input#txtEventStaff").hide();
+        $("input#txtProgramParticipant").hide();
+        $("input#txtAlumniSpeaker").hide();
+        $("input#txtFacultySpeaker").hide();
+        $("input#txtPanelMember").hide();
+        $("input#txtTourOperator").hide();
         $(":checkbox").click(countChecked);
     }
 
@@ -54,6 +76,132 @@
         }
         else {
             $("input#txtVenue").hide();
+        }
+        if ($("input#chkEventURL").is(':checked')) {
+            $("input#txtEventURL").show();
+        }
+        else {
+            $("input#txtEventURL").hide();
+        }
+        if ($("input#chkFees").is(':checked')) {
+            $("input#txtFees").show();
+        }
+        else {
+            $("input#txtFees").hide();
+        }
+        if ($("input#chkAttendeeCapacity").is(':checked')) {
+            $("input#txtAttendeeCapacity").show();
+        }
+        else {
+            $("input#txtAttendeeCapacity").hide();
+        }
+        if ($("input#chkPreRegistrationNumber").is(':checked')) {
+            $("input#txtPreRegistrationNumber").show();
+        }
+        else {
+            $("input#txtPreRegistrationNumber").hide();
+        }
+        if ($("input#chkPostRegistrationNumber").is(':checked')) {
+            $("input#txtPostRegistrationNumber").show();
+        }
+        else {
+            $("input#txtPostRegistrationNumber").hide();
+        }
+        if ($("input#chkPlanningTimeline").is(':checked')) {
+            $("input#txtPlanningTimeline").show();
+        }
+        else {
+            $("input#txtPlanningTimeline").hide();
+        }
+        if ($("input#chkAnticipatedAttendee").is(':checked')) {
+            $("input#txtAnticipatedAttendee").show();
+        }
+        else {
+            $("input#txtAnticipatedAttendee").hide();
+        }
+        if ($("input#chkActualAttendee").is(':checked')) {
+            $("input#txtActualAttendee").show();
+        }
+        else {
+            $("input#txtActualAttendee").hide();
+        }
+        if ($("input#chkCostPerAttendee").is(':checked')) {
+            $("input#txtCostPerAttendee").show();
+        }
+        else {
+            $("input#txtCostPerAttendee").hide();
+        }
+        if ($("input#chkContract").is(':checked')) {
+            $("input#txtContract").show();
+        }
+        else {
+            $("input#txtContract").hide();
+        }
+        if ($("input#chkNetProfit").is(':checked')) {
+            $("input#txtNetProfit").show();
+        }
+        else {
+            $("input#txtNetProfit").hide();
+        }
+        if ($("input#chkNetExpense").is(':checked')) {
+            $("input#txtNetExpense").show();
+        }
+        else {
+            $("input#txtNetExpense").hide();
+        }
+        if ($("input#chkSponsor").is(':checked')) {
+            $("input#txtSponsor").show();
+        }
+        else {
+            $("input#txtSponsor").hide();
+        }
+        if ($("input#chkCoSponsor").is(':checked')) {
+            $("input#txtCoSponsor").show();
+        }
+        else {
+            $("input#txtCoSponsor").hide();
+        }
+        if ($("input#chkTargetAudience").is(':checked')) {
+            $("input#txtTargetAudience").show();
+        }
+        else {
+            $("input#txtTargetAudience").hide();
+        }
+        if ($("input#chkEventStaff").is(':checked')) {
+            $("input#txtEventStaff").show();
+        }
+        else {
+            $("input#txtEventStaff").hide();
+        }
+        if ($("input#chkProgramParticipant").is(':checked')) {
+            $("input#txtProgramParticipant").show();
+        }
+        else {
+            $("input#txtProgramParticipant").hide();
+        }
+        if ($("input#chkAlumniSpeaker").is(':checked')) {
+            $("input#txtAlumniSpeaker").show();
+        }
+        else {
+            $("input#txtAlumniSpeaker").hide();
+        }
+        if ($("input#chkFacultySpeaker").is(':checked')) {
+            $("input#txtFacultySpeaker").show();
+        }
+        else {
+            $("input#txtFacultySpeaker").hide();
+        }
+        if ($("input#chkPanelMember").is(':checked')) {
+            $("input#txtPanelMember").show();
+        }
+        else {
+            $("input#txtPanelMember").hide();
+        }
+        if ($("input#chkTourOperator").is(':checked')) {
+            $("input#txtTourOperator").show();
+        }
+        else {
+            $("input#txtTourOperator").hide();
         }
     }
 </script>
@@ -277,22 +425,32 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input type="checkbox" id="chkEventURL" value="" />Event URL</label>
+                                                    <input id="txtEventURL" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Fees</label>
+                                                        <input type="checkbox" id="chkFees" value=""/>Fees</label>
+                                                    <input id="txtFees" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Attendee capactiy</label>
+                                                        <input type="checkbox" id="chkAttendeeCapacity" value=""/>Attendee capactiy</label>
+                                                    <input id="txtAttendeeCapacity" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Pre & Post Event Registration Numbers</label>
+                                                        <input type="checkbox" id="chkPreRegistrationNumber" value=""/>Pre Event Registration Number</label>
+                                                    <input id="txtPreRegistrationNumber" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Planning timeline</label>
+                                                        <input type="checkbox" id="chkPostRegistrationNumber" value=""/>Post Event Registration Number</label>
+                                                    <input id="txtPostRegistrationNumber" type="text" />
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" id="chkPlanningTimeline" value=""/>Planning timeline</label>
+                                                    <input id="txtPlanningTimeline" type="text" />
                                                 </div>
 
                                             </div>
@@ -301,7 +459,7 @@
                                 </div>
                             </div>
 
-                            <%--Budget--%>
+                            <%--Budget Panel--%>
                             <div class="col-md-4">
                                 <div class="pannel-group" id="accordion3">
                                     <div class="panel panel-default">
@@ -314,23 +472,33 @@
                                             <div class="panel-body">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Anticipated</label>
+                                                        <input type="checkbox" id="chkAnticipatedAttendee" value=""/>Anticipated Attendee</label>
+                                                    <input id="txtAnticipatedAttendee" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Actual</label>
+                                                        <input type="checkbox" id="chkActualAttendee" value=""/>Actual Attendee</label>
+                                                    <input id="txtActualAttendee" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Overall cost per attendee</label>
+                                                        <input type="checkbox" id="chkCostPerAttendee" value=""/>Overall cost per attendee</label>
+                                                    <input id="txtCostPerAttendee" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Contra</label>
+                                                        <input type="checkbox" id="chkContract" value=""/>Contract</label>
+                                                    <input id="txtContract" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Net Profit/Expense</label>
+                                                        <input type="checkbox" id="chkNetProfit" value=""/>Net Profit</label>
+                                                    <input id="txtNetProfit" type="text" />
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" id="chkNetExpense" value=""/>Net Expense</label>
+                                                    <input id="txtNetExpense" type="text" />
                                                 </div>
 
 
@@ -352,39 +520,48 @@
                                             <div class="panel-body">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Sponsors</label>
+                                                        <input type="checkbox" id="chkSponsor" value=""/>Sponsor</label>
+                                                    <input id="txtSponsor" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Co-sponsors</label>
+                                                        <input type="checkbox" id="chkCoSponsor" value=""/>Co-Sponsors</label>
+                                                    <input id="txtCoSponsor" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Targeted Audience</label>
+                                                        <input type="checkbox" id="chkTargetAudience" value=""/>Targeted Audience</label>
+                                                    <input id="txtTargetAudience" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Event staff</label>
+                                                        <input type="checkbox" id="chkEventStaff" value=""/>Event Staff</label>
+                                                    <input id="txtEventStaff" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Program Participants</label>
+                                                        <input type="checkbox" id="chkProgramParticipant" value=""/>Program Participant</label>
+                                                    <input id="txtProgramParticipant" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Alumni Speaker(s)</label>
+                                                        <input type="checkbox" id="chkAlumniSpeaker" value=""/>Alumni Speaker(s)</label>
+                                                    <input id="txtAlumniSpeaker" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Faculty speaker(s)</label>
+                                                        <input type="checkbox" id="chkFacultySpeaker" value=""/>Faculty Speaker(s)</label>
+                                                    <input id="txtFacultySpeaker" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Panel members</label>
+                                                        <input type="checkbox" id="chkPanelMember" value=""/>Panel Member(s)</label>
+                                                    <input id="txtPanelMember" type="text" />
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" value="">Tour operator</label>
+                                                        <input type="checkbox" id="chkTourOperator" value=""/>Tour Operator</label>
+                                                    <input id="txtTourOperator" type="text" />
                                                 </div>
 
 
