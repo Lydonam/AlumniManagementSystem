@@ -20,6 +20,13 @@
 <link href="BootstrapPickerMaster/dist/css/bootstrap-formhelpers.min.css" rel="stylesheet" />
 <script src="BootstrapPickerMaster/dist/js/bootstrap-formhelpers.min.js"></script>
 
+<%--Script for ToolTips--%>
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -235,7 +242,7 @@
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="auto-style1" href="#">Alumni Event Calendar</a>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
+                    <button type="button" class="-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
                         <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
                 </div>
@@ -264,7 +271,7 @@
             <div class="panel-group" id="accordion">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Event Information</a>
+                        <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion" href="#collapseOne">Event Information</a>
                     </div>
 
                     <div id="collapseOne" class="panel-collapse collapse in">
@@ -394,7 +401,7 @@
             <div class="panel-group" id="#eventAccordion">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <a data-toggle="collapse" data-parent="#eventAccordion" href="#eventCollapse">Event Details</a>
+                        <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#eventAccordion" href="#eventCollapse">Event Details</a>
                     </div>
                     <div id="eventCollapse" class="panel-collapse collapse in">
                         <div class="panel-body">
@@ -405,7 +412,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
 
-                                            <a data-toggle="collapse" data-parent="#accordion2" href="#collapsetwo">Event Overview</a>
+                                            <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion2" href="#collapsetwo">Event Overview</a>
 
                                         </div>
                                         <div id="collapsetwo" class="panel-collapse collapse out">
@@ -465,7 +472,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
 
-                                            <a data-toggle="collapse" data-parent="#accordion3" href="#collapseThree">Budget</a>
+                                            <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion3" href="#collapseThree">Budget</a>
 
                                         </div>
                                         <div id="collapseThree" class="panel-collapse collapse out">
@@ -513,7 +520,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
 
-                                            <a data-toggle="collapse" data-parent="#accordion4" href="#collapseFour">Participants / Banner ID #</a>
+                                            <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion4" href="#collapseFour">Participants / Banner ID #</a>
 
                                         </div>
                                         <div id="collapseFour" class="panel-collapse collapse out">
@@ -577,7 +584,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
 
-                                            <a data-toggle="collapse" data-parent="#accordion5" href="#collapseFive">Marketing & Communication</a>
+                                            <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion5" href="#collapseFive">Marketing & Communication</a>
 
                                         </div>
                                         <div id="collapseFive" class="panel-collapse collapse out">
@@ -646,7 +653,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
 
-                                            <a data-toggle="collapse" data-parent="#accordion6" href="#collapseSix">PreEvent Logistics</a>
+                                            <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion6" href="#collapseSix">PreEvent Logistics</a>
 
                                         </div>
                                         <div id="collapseSix" class="panel-collapse collapse out">
@@ -718,7 +725,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
 
-                                            <a data-toggle="collapse" data-parent="#accordion7" href="#collapseSeven">Post Event Activities</a>
+                                            <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion7" href="#collapseSeven">Post Event Activities</a>
 
                                         </div>
                                         <div id="collapseSeven" class="panel-collapse collapse out">
@@ -765,7 +772,7 @@
                         <div id="minusPanel" class="glyphicon glyphicon-minus pull-right" style="cursor: pointer"></div>
                         <div id="addPanel" class="glyphicon glyphicon-plus pull-right" style="cursor: pointer"></div>
                         <%--<button class="btn btn-lg btn-primary btn-add-panel"><i class="glyphicon glyphicon-plus pull-right"></i></button>--%>
-                        <a data-toggle="collapse" data-parent="#accordion8" href="#collapseEight">Sub Event</a>
+                        <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion8" href="#collapseEight">Sub Event</a>
                     </div>
                     <div id="collapseEight" class="panel-collapse collapse out">
                         <div class="panel-body">
@@ -773,7 +780,7 @@
                             <div class="pannel-group" id="accordion9">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                        <a data-toggle="collapse" data-parent="#accordion9" href="#collapseNine">Sub Event Details</a>
+                                        <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion9" href="#collapseNine">Sub Event Details</a>
                                     </div>
                                     <div id="collapseNine" class="panel-collapse collapse out">
                                         <div class="panel-body">
@@ -813,7 +820,7 @@
                                     <span class="glyphicon glyphicon-minus pull-right "></span>
 
                                     <h4 class="panel-title">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion8" href="#collapseThree">Collapsible Group Item #2 (template panel)
+                                        <a class="accordion-toggle" data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion8" href="#collapseThree">Collapsible Group Item #2 (template panel)
                                         </a>
                                     </h4>
 
@@ -830,7 +837,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <asp:LinkButton ID="btnAddAdditionalOwners" runat="server" class="glyphicon glyphicon-plus pull-right"></asp:LinkButton>
-                                    <a data-toggle="collapse" data-parent="#accordion10" href="#collapseTen">Sub Event Owner</a>
+                                    <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion10" href="#collapseTen">Sub Event Owner</a>
                                 </div>
                                 <div id="collapseTen" class="panel-collapse collapse out">
                                     <div class="panel-body">
@@ -861,7 +868,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <asp:LinkButton ID="btnAddSubEventLocation" runat="server" class="glyphicon glyphicon-plus pull-right"></asp:LinkButton>
-                                    <a data-toggle="collapse" data-parent="#accordion11" href="#collapseEleven">Sub Event Location</a>
+                                    <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion11" href="#collapseEleven">Sub Event Location</a>
                                 </div>
                                 <div id="collapseEleven" class="panel-collapse collapse out">
                                     <div class="panel-body">
@@ -903,7 +910,7 @@
                         <div class="pannel-group" id="accordion12">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <a data-toggle="collapse" data-parent="#accordion12" href="#collapseTwelve">Sub Event Sponsors</a>
+                                    <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion12" href="#collapseTwelve">Sub Event Sponsors</a>
                                 </div>
                                 <div id="collapseTwelve" class="panel-collapse collapse out">
                                     <div class="panel-body">
@@ -956,7 +963,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <asp:LinkButton ID="btnAddPanelist" runat="server" class="glyphicon glyphicon-plus pull-right"></asp:LinkButton>
-                                    <a data-toggle="collapse" data-parent="#accordion13" href="#collapseThirteen">Sub Event Panelists</a>
+                                    <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion13" href="#collapseThirteen">Sub Event Panelists</a>
                                 </div>
                                 <div id="collapseThirteen" class="panel-collapse collapse out">
                                     <div class="panel-body">
@@ -995,7 +1002,7 @@
         <div class="pannel-group" id="accordion14">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <a data-toggle="collapse" data-parent="#accordion14" href="#collapseFourteen">Task</a>
+                    <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion14" href="#collapseFourteen">Task</a>
                 </div>
                 <div id="collapseFourteen" class="panel-collapse collapse out">
                     <div class="panel-body">
@@ -1004,7 +1011,7 @@
                         <div class="pannel-group" id="accordion15">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <a data-toggle="collapse" data-parent="#accordion15" href="#collapseFifteen">Catering</a>
+                                    <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion15" href="#collapseFifteen">Catering</a>
                                 </div>
                                 <div id="collapseFifteen" class="panel-collapse collapse out">
                                     <div class="panel-body">
@@ -1026,7 +1033,7 @@
                         <div class="pannel-group" id="accordion16">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <a data-toggle="collapse" data-parent="#accordion16" href="#collapseSixteen">Entertainment</a>
+                                    <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion16" href="#collapseSixteen">Entertainment</a>
                                 </div>
                                 <div id="collapseSixteen" class="panel-collapse collapse out">
                                     <div class="panel-body">
