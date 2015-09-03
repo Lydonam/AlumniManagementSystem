@@ -1,108 +1,139 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="createReport.aspx.cs" Inherits="AlumniUI.createReport" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="createReport.aspx.cs" Inherits="AlumniUI.createReportNew" %>
 
 <!DOCTYPE html>
+
 <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
 <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<%--For navigation bar color (cherry)--%>
 <link href="menubar.css" rel="stylesheet" />
 
 <%--style sheet reference for footer--%>
 <link type="text/css" rel="stylesheet" href="http://www.temple.edu/sites/temple/files/css/css_OCCCxEXLcOWEYOLZIlp4WFqVS4zcfvLRB6D_bEd9x50.css" media="screen" />
 
-<%--make things centered--%>
-<style>
-    .center {
-        margin-left: 0;
-        margin-right: 0;
-        margin: 0 auto;
-    }
-
-    .auto-style1 {
-        width: 349px;
-    }
-</style>
-
-<%--code for menu bar--%>
-<form id="form1" runat="server">
-    <div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Alumni Event Calendar</a>
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
-                    <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse navbar-menubuilder">
-                <ul class="nav navbar-nav navbar-left">
-                    <li><a href="mainpage.aspx">Home</a>
-                    </li>
-                    <li><a href="createEvent.aspx">Create Events</a>
-                    </li>
-                    <li><a href="createTask.aspx">Create Tasks</a>
-                    </li>
-                    <li><a href="viewEvent.aspx">View Events</a>
-                    </li>
-                    <li class="active"><a href="createReport.aspx">Create Report</a>
-                    </li>
-                </ul>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <%--Code for the navigation Bar--%>
+        <div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Alumni Event Calendar</a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
+                        <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse navbar-menubuilder">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="mainpage.aspx">Home</a>
+                        </li>
+                        <li><a href="createEvent.aspx">Create Events</a>
+                        </li>
+                        <li><a href="createTask.aspx">Create Tasks</a>
+                        </li>
+                        <li><a href="viewEvent.aspx">View Events</a>
+                        </li>
+                        <li class="active"><a href="createReport.aspx">Create Report</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
 
+        <%--Code for the panel containing search and gridview--%>
+        <div class="container">           
+            <div class="col-lg-12">
+                <h4 style="color: #a41e35"><b>Find and select events to export them to Excel Spreadsheet</b></h4>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" style="font-weight: bold">Look Up Events</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-inline" style="text-align: center">
+                            <asp:Label ID="lblSearch" runat="server" Text="Search By Title: " Font-Bold="true"></asp:Label>&nbsp
+                            <asp:TextBox ID="txtSearchRestaurant" runat="server" CssClass="form-control" placeHolder="Search.."></asp:TextBox>
+                            &nbsp&nbsp&nbsp&nbsp
 
-    <%--div for dropdown list--%>
-    <div style="border: 0px solid #a41e35; width: 848px;" class="center">
-        <asp:label id="lbl" runat="server" text="Event Type"></asp:label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:label id="Label1" runat="server" text="Owner"></asp:label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-    <asp:label id="Label2" runat="server" text="Date"></asp:label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:label id="Label3" runat="server" text="Event"></asp:label>
-        <br />
-        <asp:dropdownlist id="DropDownList5" runat="server">
-        <asp:ListItem>Networking</asp:ListItem>
-    </asp:dropdownlist>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-    <asp:dropdownlist id="DropDownList6" runat="server">
-        <asp:ListItem>Steve Hazzard</asp:ListItem>
-        <asp:ListItem>Jacob</asp:ListItem>
-    </asp:dropdownlist>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:dropdownlist id="DropDownList7" runat="server">
+                    <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="btn-sm btn-primary" />
+                            <br />
+                            <h2 style="font-weight: bold">Or</h2>
+
+                            <div style="text-align: left">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+                            <asp:Label ID="Label4" runat="server" Text="Event Type" Font-Bold="true"></asp:Label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                                <asp:Label ID="Label1" runat="server" Text="Owner" Font-Bold="true"></asp:Label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                                <asp:Label ID="Label2" runat="server" Text="Date" Font-Bold="true"></asp:Label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <asp:Label ID="Label3" runat="server" Text="Event" Font-Bold="true"></asp:Label>
+                                <br />
+                            </div>
+
+                            <div style="border: 0px solid #a41e35; text-align: center">
+
+                                <asp:DropDownList ID="DropDownList5" runat="server" Height="16px" Width="90px">
+                                    <asp:ListItem>Networking</asp:ListItem>
+                                </asp:DropDownList>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+
+                                <asp:DropDownList ID="DropDownList6" runat="server">
+                                    <asp:ListItem>Steve Hazzard</asp:ListItem>
+                                    <asp:ListItem>Jacob</asp:ListItem>
+                                </asp:DropDownList>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:DropDownList ID="DropDownList7" runat="server">
         <asp:ListItem>March 29th, 2015</asp:ListItem>
-    </asp:dropdownlist>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:dropdownlist id="DropDownList8" runat="server">
-        <asp:ListItem>Tampa: Phillies Spring Training 2015</asp:ListItem>
-    </asp:dropdownlist>
-        &nbsp;
-    </div>
+    </asp:DropDownList>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="DropDownList8" runat="server" Height="16px" Width="250px">
+                                    <asp:ListItem>Tampa: Phillies Spring Training 2015</asp:ListItem>
+                                </asp:DropDownList>
+                                &nbsp;
+                                
+                                <asp:Button ID="btnGo" runat="server" Text="Go" CssClass="btn-sm btn-primary" />
+                                <br />
+                                <br />
 
-    <br />
-    <br />
+                            </div>
 
-    <div class="container table-responsive">
-        <br />
-        <br />
-        <asp:gridview id="gdvStudentOut" runat="server" autogeneratecolumns="False" CssClass="table table-striped table-bordered table-condensed">
-                <Columns>
-                    <asp:BoundField HeaderText="Title" />
-                    <asp:BoundField HeaderText="Name" />
-                    <asp:BoundField HeaderText="Date" />
+                            &nbsp&nbsp&nbsp&nbsp
+        
+                        </div>
 
-                    <asp:TemplateField HeaderText="Select Event">
-                        <ItemTemplate>
-                            <asp:CheckBox ID="CheckBox5" runat="server" />
-                        </ItemTemplate>
-                       
-                    </asp:TemplateField>
-                </Columns>
-            </asp:gridview>
-    </div>
-</form>
+                        <%--Grid View for the events--%>
+                        <asp:GridView ID="gvEvents" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-bordered table-condensed" OnRowDataBound="gvEvents_RowDataBound">
+                            <Columns>
+                                <asp:BoundField HeaderText="Title" />
+                                <asp:BoundField HeaderText="Name" />
+                                <asp:BoundField HeaderText="Date" />
 
+                                <asp:TemplateField HeaderText="Select Event">
+                                    <ItemTemplate>
+                                        <asp:CheckBox ID="CheckBox5" runat="server" />
+                                    </ItemTemplate>
+
+                                </asp:TemplateField>
+                            </Columns>
+                        </asp:GridView>
+
+                        <br />
+                        <div style="text-align: right">
+                            <asp:Button ID="btnGenerateReport" runat="server" Text="Generate Report" CssClass="btn-sm btn-primary" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </form>
+</body>
+</html>
+    
 <%--footer for pages--%>
 <footer id="#footer">
     <div class="footer-wrap top">
@@ -183,3 +214,4 @@
         </div>
     </div>
 </footer>
+
