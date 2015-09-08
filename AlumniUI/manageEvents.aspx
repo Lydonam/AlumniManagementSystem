@@ -1,7 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="createEvent.aspx.cs" Inherits="AlumniUI.createEvent" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="manageEvents.aspx.cs" Inherits="AlumniUI.ManageEvents" %>
 
 <!DOCTYPE html>
 
+<html xmlns="http://www.w3.org/1999/xhtml" />
 
 <%--<link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
 <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
@@ -32,8 +33,6 @@
 
 <%--for footer--%>
 <link type="text/css" rel="stylesheet" href="http://www.temple.edu/sites/temple/files/css/css_OCCCxEXLcOWEYOLZIlp4WFqVS4zcfvLRB6D_bEd9x50.css" media="screen" />
-
-<html xmlns="http://www.w3.org/1999/xhtml" />
 
 <%--script to add and remove textboxes using checkboxes--%>
 <script>
@@ -460,7 +459,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="control-label">Event Name<span style="color: red">*</span></label>
-                                    <asp:TextBox ID="txtEventName" runat="server" CssClass="form-control input-md" TabIndex="1"></asp:TextBox>
+                                    <asp:TextBox ID="txtEventName" runat="server" CssClass="form-control input-md" TabIndex="1" Enabled="False"></asp:TextBox>
                                 </div>
                             </div>
 
@@ -468,7 +467,7 @@
                                 <div class="form-group">
                                     <label class="control-label">Event Start Time<span style="color: red">*</span></label>
                                     <%--<input class="form-control" type="text" id="starttimepicker" />--%>
-                                    <div class="bfh-timepicker" data-mode="12h" id="starttimepicker">
+                                    <div class="bfh-timepicker" data-mode="12h" id="starttimepicker" aria-hidden="False">
                                     </div>
                                 </div>
                             </div>
@@ -1321,17 +1320,7 @@
                        </div>
             </div> --%>
 
-        <a href="CreateSubEvent.aspx" class="btn btn-primary btn-Sigin" data-toggle="popover" data-placement="right" data-content="Click Next to Create a SubEvent for your Event." title="" data-original-title="Popover on right" style="font-size: large; height: 43px;">
-            <div class="text-center">
-                <strong>Add Sub Event</strong>
-            </div>
-        </a>
-
-
-
-
     </form>
-
 </body>
 </html>
 
@@ -1418,6 +1407,7 @@
         </div>
     </div>
 </footer>
+
 
 
 
