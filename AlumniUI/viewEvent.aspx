@@ -113,7 +113,7 @@
 
                                 <asp:TemplateField HeaderText="View Detail" ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
-                                        <button id="Button6" runat="server" class="btn"><span class="glyphicon glyphicon-pencil"></span></button>
+                                        <button id="Button6" runat="server" class="btn"><span class="glyphicon glyphicon-eye-open"></span></button>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Delete" ItemStyle-HorizontalAlign="Center">
