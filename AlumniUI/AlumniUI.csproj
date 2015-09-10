@@ -238,7 +238,9 @@
     <Content Include="login.aspx" />
     <Content Include="mainpage.aspx" />
     <Content Include="menubar.css" />
+    <Content Include="panelTemplate.css" />
     <Content Include="test.aspx" />
+    <Content Include="testpage.aspx" />
     <Content Include="tmpls\day.html" />
     <Content Include="tmpls\events-list.html" />
     <Content Include="tmpls\modal.html" />
@@ -322,6 +324,13 @@
     </Compile>
     <Compile Include="test.aspx.designer.cs">
       <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testpage.aspx.cs">
+      <DependentUpon>testpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testpage.aspx.designer.cs">
+      <DependentUpon>testpage.aspx</DependentUpon>
     </Compile>
     <Compile Include="viewEvent.aspx.cs">
       <DependentUpon>viewEvent.aspx</DependentUpon>

@@ -1,8 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="createEvent.aspx.cs" Inherits="AlumniUI.createEvent" %>
 
 <!DOCTYPE html>
+<%--stylesheet for adding panel dynamically--%>
 
-
+<link href="panelTemplate.css" rel="stylesheet" />
 <%--<link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
 <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />--%>
@@ -394,7 +395,7 @@
 </script>
 <%--end of script--%>
 
-<%--script to add a panel dynamically--%>
+<%--script to add and remove a panel dynamically--%>
 <script>
     var $template = $(".template");
 
@@ -403,9 +404,9 @@
         var $newPanel = $template.clone();
         $newPanel.find(".collapse").removeClass("in");
         $newPanel.find(".accordion-toggle").attr("href", "#" + (++hash))
-            .text("Dynamic panel #" + hash);
+            .text("Sub-Event #" + hash);
         $newPanel.find(".panel-collapse").attr("id", hash);
-        $("#accordion").append($newPanel.fadeIn());
+        $("#accordiontest").append($newPanel.fadeIn());
     });
 
     $(document).on('click', '.glyphicon-minus', function () {
@@ -480,6 +481,7 @@
                                     </div>
                                 </div>
                             </div>
+
 
                             <div class="col-md-4">
                                 <div class="form-group">
@@ -578,17 +580,153 @@
                 </div>
             </div>
 
+            <%--Event Sponsor Panel Starts--%>
+                        <div class="panel-group" id="mainEventSponsorAccordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <a data-toggle="collapse" data-parent="#mainEventSponsorAccordion" href="#sponsorsCollapse">Event Sponsors</a>
+                                </div>
+                                <div id="sponsorsCollapse" class="panel-collapse collapse out">
+                                    <div class="panel-body">
+                                        <div class="col-md-4">
+                                            <label class="control-label">Sponsor Name<span style="color: red">*</span></label>
+                                            <asp:TextBox ID="SponsorName" runat="server" CssClass="form-control"></asp:TextBox>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="control-label">Email<span style="color: red">*</span></label>
+                                            <asp:TextBox ID="SponsorEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label class="control-label">University Partner?<span style="color: red">*</span></label>
+                                            <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal">
+                                                <asp:ListItem>Yes</asp:ListItem>
+                                                <asp:ListItem>No</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label class="control-label">Add Sponsor</label><br />
+                                            <asp:LinkButton ID="LinkButton1" runat="server" class="glyphicon glyphicon-plus"></asp:LinkButton>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="control-label">Co-Sponsor Name<span style="color: red">*</span></label>
+                                            <asp:TextBox ID="CoSponsorName" runat="server" CssClass="form-control"></asp:TextBox>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="control-label">Email<span style="color: red">*</span></label>
+                                            <asp:TextBox ID="CoSponsorEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label class="control-label">University Partner?<span style="color: red">*</span></label>
+                                            <asp:RadioButtonList ID="UniversityPartner" runat="server" RepeatDirection="Horizontal">
+                                                <asp:ListItem>Yes</asp:ListItem>
+                                                <asp:ListItem>No</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label class="control-label">Add Co-Sponsor</label><br />
+                                            <asp:LinkButton ID="LinkButton2" runat="server" class="glyphicon glyphicon-plus"></asp:LinkButton>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%--Event Sponsor Panel Ends--%>
+
+            <%--Event Detail panel--%>
             <div class="panel-group" id="#eventAccordion">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#eventAccordion" href="#eventCollapse">Event Details</a>
                     </div>
-                    <div id="eventCollapse" class="panel-collapse collapse in">
+                    <div id="eventCollapse" class="panel-collapse collapse out">
                         <div class="panel-body">
+
+                             <%--Category Panel--%>
+                            <div class="col-md-4">
+                                <div class="panel-group" id="categoryPanel">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+
+                                            <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#categoryPanel" href="#categoryCollapse">Event Category</a>
+
+                                        </div>
+                                        <div id="categoryCollapse" class="panel-collapse collapse out">
+                                            <div class="panel-body">
+                                                <div class="container"><div class="row"><div class="col-md-6">
+ <div class="checkbox">
+   <label>
+     <asp:CheckBox ID="chkAlumniSociety" runat="server" /> Alumni Society Events
+   </label>
+ </div>
+
+   <div class="checkbox">
+   <label>
+      <asp:CheckBox ID="chkAthletics" runat="server" /> Athletics Events
+   </label>
+ </div>
+   <div class="checkbox">
+   <label>
+     <asp:CheckBox ID="chkCareer" runat="server" /> Career Events
+   </label>
+ </div>
+   <div class="checkbox">
+   <label>
+      <asp:CheckBox ID="chkCultural" runat="server" /> Cultural Events
+   </label>
+ </div>
+   <div class="checkbox">
+   <label>
+      <asp:CheckBox ID="chkEducational" runat="server" /> Educational Events
+   </label>
+ </div>
+
+   <div class="checkbox">
+   <label>
+      <asp:CheckBox ID="chkNetworking" runat="server" /> Networking Events
+   </label>
+ </div>
+   <div class="checkbox">
+   <label>
+      <asp:CheckBox ID="chkRegionalChapter" runat="server" /> Regional Chapter Events
+   </label>
+ </div>
+   <div class="checkbox">
+   <label>
+      <asp:CheckBox ID="chkReunion" runat="server" /> Reunion Events
+   </label>
+ </div>
+   <div class="checkbox">
+   <label>
+      <asp:CheckBox ID="chkSchoolandCollege" runat="server" /> School and College Events
+   </label>
+ </div>
+ <div class="checkbox">
+   <label>
+      <asp:CheckBox ID="chkStudent" runat="server" /> Student Events
+   </label>
+ </div>
+
+   <div class="checkbox">
+   <label>
+      <asp:CheckBox ID="chkVolunteer" runat="server" /> Volunteer Events
+   </label>
+ </div>
+   <div class="checkbox">
+   <label>
+      <asp:CheckBox ID="chkWebinar" runat="server" /> Webinar Events
+   </label>
+ </div>
+  
+  </div></div></div>
+                                    </div>
+                                </div>
+                            </div></div></div>
+
+
                             <%--Event Overview--%>
 
                             <div class="col-md-4">
-                                <div class="pannel-group" id="accordion2">
+                                <div class="panel-group" id="accordion2">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
 
@@ -648,7 +786,7 @@
 
                             <%--Budget Panel--%>
                             <div class="col-md-4">
-                                <div class="pannel-group" id="accordion3">
+                                <div class="panel-group" id="accordion3">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
 
@@ -696,7 +834,7 @@
                             </div>
 
                             <div class="col-md-4">
-                                <div class="pannel-group" id="accordion4">
+                                <div class="panel-group" id="accordion4">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
 
@@ -760,7 +898,7 @@
 
                             <%--Marketing panel--%>
                             <div class="col-md-4">
-                                <div class="pannel-group" id="accordion5">
+                                <div class="panel-group" id="accordion5">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
 
@@ -832,7 +970,7 @@
 
                             <%--next row--%>
                             <div class="col-md-4">
-                                <div class="pannel-group" id="accordion6">
+                                <div class="panel-group" id="accordion6">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
 
@@ -906,7 +1044,7 @@
                             </div>
                             <%--post event panel--%>
                             <div class="col-md-4">
-                                <div class="pannel-group" id="accordion7">
+                                <div class="panel-group" id="accordion7">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
 
@@ -954,20 +1092,17 @@
 
 
             <%--Adding a Sub Event Panel--%>
-            <div class="pannel-group" id="accordion8">
+            <div class="panel-group" id="accordion8">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <%--<Button class="alert-danger" ID="minusPanel" runat="server" class="glyphicon glyphicon-minus pull-right"></Button>
-                        <asp:Button ID="addPanel" runat="server" class="glyphicon glyphicon-plus pull-right"></asp:Button>--%>
                         <div id="minusPanel" class="glyphicon glyphicon-minus pull-right" style="cursor: pointer"></div>
                         <div id="addPanel" class="glyphicon glyphicon-plus pull-right" style="cursor: pointer"></div>
-                        <%--<button class="btn btn-lg btn-primary btn-add-panel"><i class="glyphicon glyphicon-plus pull-right"></i></button>--%>
-                        <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion8" href="#collapseEight">Sub Event</a>
+                        <a class ="accordion-toggle" data-toggle="collapse" "tooltip" title="Click to Expand or Collapse" data-parent="#accordion8" href="#collapseEight">Sub Event</a>
                     </div>
                     <div id="collapseEight" class="panel-collapse collapse out">
                         <div class="panel-body">
                             <%--Sub Event Detail Panel Starts--%>
-                            <div class="pannel-group" id="accordion9">
+                            <div class="panel-group" id="accordion9">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion9" href="#collapseNine">Sub Event Details</a>
@@ -980,11 +1115,11 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <label class="control-label">Start Date<span style="color: red">*</span></label>
-                                                <asp:TextBox ID="txtStartDate" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <div class="bfh-datepicker" id="subEventStartDate"></div>
                                             </div>
                                             <div class="col-md-4">
                                                 <label class="control-label">Start Time<span style="color: red">*</span></label>
-                                                <asp:TextBox ID="txtStartTime" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <div class="bfh-timepicker" data-mode="12h" id="subEventStartTime"></div>
                                             </div>
                                             <div class="col-md-4">
                                                 <label class="control-label">Registration URL<span style="color: red">*</span></label>
@@ -992,38 +1127,21 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <label class="control-label">End Date<span style="color: red">*</span></label>
-                                                <asp:TextBox ID="txtEndDate" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <div class="bfh-datepicker" id="subEventEndDate"></div>
                                             </div>
                                             <div class="col-md-4">
                                                 <label class="control-label">End Time<span style="color: red">*</span></label>
-                                                <asp:TextBox ID="txtEndTime" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <div class="bfh-timepicker" data-mode="12h" id="subEventEndTime"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <%--Sub Event Detail Panel Ends--%>
-
-                            <%--testing planel--%>
-                            <div class="panel panel-default template">
-                                <div class="panel-heading">
-                                    <span class="glyphicon glyphicon-minus pull-right "></span>
-
-                                    <h4 class="panel-title">
-                                        <a class="accordion-toggle" data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion8" href="#collapseThree">Collapsible Group Item #2 (template panel)
-                                        </a>
-                                    </h4>
-
-                                </div>
-                                <div id="collapseTwenty" class="panel-collapse collapse">
-                                    <div class="panel-body">This is being cloned</div>
-                                </div>
-                            </div>
                         
-                        <%--testing panel end--%>
 
                         <%--Sub Event Owner Panel Starts--%>
-                        <div class="pannel-group" id="accordion10">
+                        <div class="panel-group" id="accordion10">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <asp:LinkButton ID="btnAddAdditionalOwners" runat="server" class="glyphicon glyphicon-plus pull-right"></asp:LinkButton>
@@ -1054,7 +1172,7 @@
                         <%--Sub Event Owner Panel Ends--%>
 
                         <%--Sub Event Location Panel Starts--%>
-                        <div class="pannel-group" id="accordion11">
+                        <div class="panel-group" id="accordion11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <asp:LinkButton ID="btnAddSubEventLocation" runat="server" class="glyphicon glyphicon-plus pull-right"></asp:LinkButton>
@@ -1097,7 +1215,7 @@
                         <%--Sub Event Location Panel Ends--%>
 
                         <%--Sub Event Sponsor Panel Starts--%>
-                        <div class="pannel-group" id="accordion12">
+                        <div class="panel-group" id="accordion12">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion12" href="#collapseTwelve">Sub Event Sponsors</a>
@@ -1149,7 +1267,7 @@
                         <%--Sub Event Sponsor Panel Ends--%>
 
                         <%--Sub Event Panelist Panel Starts--%>
-                        <div class="pannel-group" id="accordion13">
+                        <div class="panel-group" id="accordion13">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <asp:LinkButton ID="btnAddPanelist" runat="server" class="glyphicon glyphicon-plus pull-right"></asp:LinkButton>
@@ -1181,15 +1299,53 @@
                                 </div>
                             </div>
                         </div>
-                        <%--Sub Event Panelist Panel Ends--%>
                     </div>
                 </div>
             </div>
-        </div>
 
+<%--Template for adding another sub-event panel Testing--%>
+ <%--Adding a Sub Event Panel--%>
+         <%-- <div class="panel-group" id="accordiontest">
+    <div class="panel panel-default">
+        <div class="panel-heading"> <span class="glyphicon glyphicon-minus pull-right" "glyphicon glyphicon-plus pull-right"></span>
+            <span class="glyphicon glyphicon-plus pull-right"></span>
+
+             <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordiontest" href="#collapse1">
+          Collapsible Group Item #1
+        </a>
+      </h4>
+
+        </div>
+        <div id="collapse1" class="panel-collapse collapse in">
+            <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.</div>
+        </div>
+    </div>
+    
+    <div class="panel panel-default template">
+        <div class="panel-heading"> <span class="glyphicon glyphicon-minus pull-right"></span>
+
+             <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordiontest" href="#collapse3">
+          Collapsible Group Item #2 (template panel)
+        </a>
+      </h4>
+
+        </div>
+        <div id="collapse3" class="panel-collapse collapse">
+            <div class="panel-body">TEsting</div>
+        </div>
+    </div>
+</div>
+<br />
+<button class="btn btn-lg btn-primary btn-add-panel"> <i class="glyphicon glyphicon-plus"></i> Add new panel</button>--%>
+
+<%--Template for adding another sub-event panel Ends--%>
+        </div>
+<%--Sub Event Panelist Panel Ends--%>
 
         <%--Adding Task Panel--%>
-        <div class="pannel-group" id="accordion14">
+        <div class="panel-group" id="accordion14">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion14" href="#collapseFourteen">Task</a>
@@ -1198,7 +1354,7 @@
                     <div class="panel-body">
 
                         <%--Start Panel for Catering--%>
-                        <div class="pannel-group" id="accordion15">
+                        <div class="panel-group" id="accordion15">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion15" href="#collapseFifteen">Catering</a>
@@ -1220,7 +1376,7 @@
                         <%--End Panel For Catering--%>
 
                         <%--Start Panel for Entertainment--%>
-                        <div class="pannel-group" id="accordion16">
+                        <div class="panel-group" id="accordion16">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion16" href="#collapseSixteen">Entertainment</a>
@@ -1246,80 +1402,7 @@
         </div>
 
         </div>
-        <%--div for containor--%>
 
-
-
-        <%--used for date picker--%> <%--Don't move these block of code. It must be here for it to work--%>
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css" />
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
-        <link rel="stylesheet" href="/resources/demos/style.css" />
-        <link href="jquery.timepicker.css" rel="stylesheet" />
-        <script src="jquery.timepicker.js"></script>
-        <script src="jquery.timepicker.min.js"></script>
-        <%--script for date picker--%>
-        <script>
-            $(function () {
-                $("#datepicker").datepicker();
-            });
-
-            $(function () {
-                $("#datepicker2").datepicker();
-            });
-        </script>
-        <%--script for time picker--%>
-        <script>
-            $(function () {
-                $('#starttimepicker').timepicker();
-            });
-
-            $(function () {
-                $('#endtimepicker').timepicker();
-            });
-        </script>
-
-
-
-
-
-
-        <%--   code for the panel     --%>
-        <%--<div class="panel panel-default">
-                                <div class="panel-heading">
-                                         
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Miscellaneous</a>
-                                        
-                                        </div>
-                                        <div id="collapseTwo" class="panel-collapse collapse in">
-                                        <div class="panel-body">
-                                            <div class="row">
-											<div class="col-sm-3">
-												<div class="form-group">
-													<label class="control-label">Event Registration URL</label>
-													<input class="form-control" type="text">
-												</div>
-											</div>
-                                            <div class="col-sm-3">
-												<div class="form-group">
-													<label class="control-label">Projected Event Attendance</label>
-													<input class="form-control" type="text">
-												</div>
-											</div>
-										</div>
-                                        <div class="row">
-								        <div class="col-sm-3">
-												<div class="form-group">
-													<label class="control-label">Comments</label>
-													<input class="form-control" type="text">
-												</div>
-											</div>
-										</div>
-                                        </div>
-                                        </div>
-                       </div>
-                       </div>
-            </div> --%>
 
         <a href="CreateSubEvent.aspx" class="btn btn-primary btn-Sigin" data-toggle="popover" data-placement="right" data-content="Click Next to Create a SubEvent for your Event." title="" data-original-title="Popover on right" style="font-size: large; height: 43px;">
             <div class="text-center">
