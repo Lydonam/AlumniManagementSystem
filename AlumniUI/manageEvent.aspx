@@ -449,6 +449,10 @@
             <h4 class="auto-style3">Information About Creating Event</h4>
             <h4>This page is to Add a New Event. Please fill in these fields below to create a new new event. Then press the Next button to go to the Sub-Event page.</h4>
 
+            <div style="float:right">
+            <asp:Button ID="Button1" runat="server" Text="Edit" CssClass="btn btn-default" />
+            </div>
+            <br /><br />
             <div class="panel-group" id="accordion">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -598,7 +602,7 @@
                                         </div>
                                         <div class="col-md-2">
                                             <label class="control-label">University Partner?<span style="color: red">*</span></label>
-                                            <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal">
+                                            <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal" Enabled="false">
                                                 <asp:ListItem>Yes</asp:ListItem>
                                                 <asp:ListItem>No</asp:ListItem>
                                             </asp:RadioButtonList>
@@ -736,42 +740,42 @@
                                         <div id="collapsetwo" class="panel-collapse collapse out">
                                             <div class="panel-body">
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkGoal" runat="server" />Goal</label>                                                    
+                                                    <label><asp:CheckBox ID="chkGoal" runat="server" Enabled="False"/>Goal</label>                                                    
                                                     <asp:TextBox ID="txtGoal" runat="server"></asp:TextBox>
                                                 </div>
 
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkVenue" runat="server" />Venue</label>                                                    
+                                                    <label><asp:CheckBox ID="chkVenue" runat="server" Enabled="False"/>Venue</label>                                                    
                                                     <asp:TextBox ID="txtVenue" runat="server"></asp:TextBox>
                                                 </div>
 
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkEventURL" runat="server" />Event URL</label>                                                    
+                                                    <label><asp:CheckBox ID="chkEventURL" runat="server" Enabled="False"/>Event URL</label>                                                    
                                                     <asp:TextBox ID="txtEventURL" runat="server"></asp:TextBox>
                                                 </div>
 
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkFees" runat="server" />Fees</label>                                                    
+                                                    <label><asp:CheckBox ID="chkFees" runat="server" Enabled="False"/>Fees</label>                                                    
                                                     <asp:TextBox ID="txtFees" runat="server"></asp:TextBox>
                                                 </div>
 
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkAttendeeCapacity" runat="server" />Attendee capactiy</label>                                                    
+                                                    <label><asp:CheckBox ID="chkAttendeeCapacity" runat="server" Enabled="False"/>Attendee capactiy</label>                                                    
                                                     <asp:TextBox ID="txtAttendeeCapacity" runat="server"></asp:TextBox>
                                                 </div>
 
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkPreRegistrationNumber" runat="server" />Pre Event Registration Number</label>                                                    
+                                                    <label><asp:CheckBox ID="chkPreRegistrationNumber" runat="server" Enabled="False"/>Pre Event Registration Number</label>                                                    
                                                     <asp:TextBox ID="txtPreRegistrationNumber" runat="server"></asp:TextBox>
                                                 </div>
 
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkPostRegistrationNumber" runat="server" />Post Event Registration Number</label>                                                    
+                                                    <label><asp:CheckBox ID="chkPostRegistrationNumber" runat="server" Enabled="False"/>Post Event Registration Number</label>                                                    
                                                     <asp:TextBox ID="txtPostRegistrationNumber" runat="server"></asp:TextBox>
                                                 </div>
 
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkPlanningTimeline" runat="server" />Planning timeline</label>                                                    
+                                                    <label><asp:CheckBox ID="chkPlanningTimeline" runat="server" Enabled="False" />Planning timeline</label>                                                    
                                                     <asp:TextBox ID="txtPlanningTimeline" runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
@@ -793,32 +797,32 @@
                                             <div class="panel-body">
 
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkAnticipatedAttendee" runat="server" />Anticipated Attendee</label>                                                    
+                                                    <label><asp:CheckBox ID="chkAnticipatedAttendee" runat="server" Enabled="False"/>Anticipated Attendee</label>                                                    
                                                     <asp:TextBox ID="txtAnticipatedAttendee" runat="server"></asp:TextBox>
                                                 </div>
 
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkActualAttendee" runat="server" />Actual Attendee</label>                                                    
+                                                    <label><asp:CheckBox ID="chkActualAttendee" runat="server" Enabled="False"/>Actual Attendee</label>                                                    
                                                     <asp:TextBox ID="txtActualAttendee" runat="server"></asp:TextBox>
                                                 </div>
 
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkCostPerAttendee" runat="server" />Overall cost per attendee</label>                                                    
+                                                    <label><asp:CheckBox ID="chkCostPerAttendee" runat="server" Enabled="False"/>Overall cost per attendee</label>                                                    
                                                     <asp:TextBox ID="txtCostPerAttendee" runat="server"></asp:TextBox>
                                                 </div>
 
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkContract" runat="server" />Contract</label>                                                    
+                                                    <label><asp:CheckBox ID="chkContract" runat="server" Enabled="False"/>Contract</label>                                                    
                                                     <asp:TextBox ID="txtContract" runat="server"></asp:TextBox>
                                                 </div>
 
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkNetProfit" runat="server" />Net Profit</label>                                                    
+                                                    <label><asp:CheckBox ID="chkNetProfit" runat="server" Enabled="False"/>Net Profit</label>                                                    
                                                     <asp:TextBox ID="txtNetProfit" runat="server"></asp:TextBox>
                                                 </div>
 
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkNetExpense" runat="server" />Net Expense</label>                                                    
+                                                    <label><asp:CheckBox ID="chkNetExpense" runat="server" Enabled="False"/>Net Expense</label>                                                    
                                                     <asp:TextBox ID="txtNetExpense" runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
@@ -839,47 +843,47 @@
                                             <div class="panel-body">
 
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkSponsor" runat="server" />Sponsor</label>                                                    
+                                                    <label><asp:CheckBox ID="chkSponsor" runat="server" Enabled="False"/>Sponsor</label>                                                    
                                                     <asp:TextBox ID="txtSponsor" runat="server"></asp:TextBox>
                                                 </div>
 
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkCoSponsor" runat="server" />Co-Sponsors</label>                                                    
+                                                    <label><asp:CheckBox ID="chkCoSponsor" runat="server" Enabled="False"/>Co-Sponsors</label>                                                    
                                                     <asp:TextBox ID="txtCoSponsor" runat="server"></asp:TextBox>
                                                 </div>
 
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkTargetAudience" runat="server" />Targeted Audience</label>                                                    
+                                                    <label><asp:CheckBox ID="chkTargetAudience" runat="server" Enabled="False"/>Targeted Audience</label>                                                    
                                                     <asp:TextBox ID="txtTargetAudience" runat="server"></asp:TextBox>
                                                 </div>
 
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkEventStaff" runat="server" />Event Staff</label>                                                    
+                                                    <label><asp:CheckBox ID="chkEventStaff" runat="server" Enabled="False"/>Event Staff</label>                                                    
                                                     <asp:TextBox ID="txtEventStaff" runat="server"></asp:TextBox>
                                                 </div>
 
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkProgramParticipant" runat="server" />Program Participant</label>                                                    
+                                                    <label><asp:CheckBox ID="chkProgramParticipant" runat="server" Enabled="False"/>Program Participant</label>                                                    
                                                     <asp:TextBox ID="txtProgramParticipant" runat="server"></asp:TextBox>
                                                 </div>
 
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkAlumniSpeaker" runat="server" />Alumni Speaker(s)</label>                                                    
+                                                    <label><asp:CheckBox ID="chkAlumniSpeaker" runat="server" Enabled="False"/>Alumni Speaker(s)</label>                                                    
                                                     <asp:TextBox ID="txtAlumniSpeaker" runat="server"></asp:TextBox>
                                                 </div>
 
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkFacultySpeaker" runat="server" />Faculty Speaker(s)</label>                                                    
+                                                    <label><asp:CheckBox ID="chkFacultySpeaker" runat="server" Enabled="False"/>Faculty Speaker(s)</label>                                                    
                                                     <asp:TextBox ID="txtFacultySpeaker" runat="server"></asp:TextBox>
                                                 </div>
 
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkPanelMember" runat="server" />Panel Member(s)</label>                                                    
+                                                    <label><asp:CheckBox ID="chkPanelMember" runat="server" Enabled="False"/>Panel Member(s)</label>                                                    
                                                     <asp:TextBox ID="txtPanelMember" runat="server"></asp:TextBox>
                                                 </div>
 
                                                 <div class="checkbox">
-                                                    <label><asp:CheckBox ID="chkTourOperator" runat="server" />Tour Operator</label>                                                    
+                                                    <label><asp:CheckBox ID="chkTourOperator" runat="server" Enabled="False"/>Tour Operator</label>                                                    
                                                     <asp:TextBox ID="txtTourOperator" runat="server"></asp:TextBox>
                                                 </div>
 
@@ -900,59 +904,56 @@
                                         </div>
                                         <div id="collapseFive" class="panel-collapse collapse out">
                                             <div class="panel-body">
+
                                                 <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkPreEventCorr" value=""/>Pre-Event correspondence</label>
-                                                    <input id="txtPreEventCorr" type="text" />
+                                                    <label><asp:CheckBox ID="chkPreEventCorr" runat="server" Enabled="False"/>Pre-Event correspondence</label>                                                    
+                                                    <asp:TextBox ID="txtPreEventCorr" runat="server"></asp:TextBox>
                                                 </div>
-                                                <%--sub fields?--%>
+
                                                 <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkPostEventCorr" value=""/>Post-Event correspondence</label>
-                                                    <input id="txtPostEventCorr" type="text" />
+                                                    <label><asp:CheckBox ID="chkPostEventCorr" runat="server" Enabled="False"/>Post-Event correspondence</label>                                                    
+                                                    <asp:TextBox ID="txtPostEventCorr" runat="server"></asp:TextBox>
                                                 </div>
+                                        
                                                 <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkEmailBlast" value=""/>Email blast</label>
-                                                    <input id="txtEmailBlast" type="text" />
+                                                    <label><asp:CheckBox ID="chkEmailBlast" runat="server" Enabled="False"/>Email blast</label>                                                    
+                                                    <asp:TextBox ID="txtEmailBlast" runat="server"></asp:TextBox>
                                                 </div>
+
                                                 <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkEventListing" value=""/>Event Listing</label>
-                                                    <input id="txtEventListing" type="text" />
+                                                    <label><asp:CheckBox ID="chkEventListing" runat="server" Enabled="False"/>Event Listing</label>                                                    
+                                                    <asp:TextBox ID="txtEventListing" runat="server"></asp:TextBox>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <label><asp:CheckBox ID="chkSocialMedia" runat="server" Enabled="False"/>Social Media</label>                                                    
+                                                    <asp:TextBox ID="txtSocialMedia" runat="server"></asp:TextBox>
                                                 </div>
                                               
                                                 <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkSocialMedia" value=""/>Social Media</label>
-                                                    <input id="txtSocialMedia" type="text" />
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkFlyers" value=""/>Flyers</label>
-                                                    <input id="txtFlyers" type="text" />
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkPosters" value=""/>Posters</label>
-                                                    <input id="txtPosters" type="text" />
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkPostcards" value=""/>Postcards</label>
-                                                    <input id="txtPostcards" type="text" />
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkElectronicDisplay" value=""/>Electronic display</label>
-                                                    <input id="txtElectronicDisplay" type="text" />
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkSignage" value=""/>Signage</label>
-                                                    <input id="txtSignage" type="text" />
+                                                    <label><asp:CheckBox ID="chkFlyers" runat="server" Enabled="False"/>Flyers</label>                                                    
+                                                    <asp:TextBox ID="txtFlyers" runat="server"></asp:TextBox>
                                                 </div>
 
+                                                <div class="checkbox">
+                                                    <label><asp:CheckBox ID="chkPosters" runat="server" Enabled="False"/>Posters</label>                                                    
+                                                    <asp:TextBox ID="txtPosters" runat="server"></asp:TextBox>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <label><asp:CheckBox ID="chkPostcards" runat="server" Enabled="False"/>Postcards</label>                                                    
+                                                    <asp:TextBox ID="txtPostcards" runat="server"></asp:TextBox>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <label><asp:CheckBox ID="chkElectronicDisplay" runat="server" Enabled="False"/>Electronic display</label>                                                    
+                                                    <asp:TextBox ID="txtElectronicDisplay" runat="server"></asp:TextBox>
+                                                </div>
+                                                
+                                                <div class="checkbox">
+                                                    <label><asp:CheckBox ID="chkSignage" runat="server" Enabled="False"/>Signage</label>                                                    
+                                                    <asp:TextBox ID="txtSignage" runat="server"></asp:TextBox>
+                                                </div>
 
                                             </div>
                                         </div>
@@ -972,63 +973,61 @@
                                         </div>
                                         <div id="collapseSix" class="panel-collapse collapse out">
                                             <div class="panel-body">
+
                                                 <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkTechnologySupport" value=""/>Technology Support</label>
-                                                    <input id="txtTechnologySupport" type="text" />
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkAudioVideo" value=""/>Audio/Video</label>
-                                                    <input id="txtAudioVideo" type="text" />
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkDecorations" value=""/>Decortations</label>
-                                                    <input id="txtDecorations" type="text" />
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkPhotography" value=""/>Photography</label>
-                                                    <input id="txtPhotography" type="text" />
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkTechnology" value=""/>Technology</label>
-                                                    <input id="txtTechnology" type="text" />
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkGiveaway" value=""/>Giveaways</label>
-                                                    <input id="txtGiveaway" type="text" />
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkTravelArrangements" value=""/>Travel Arrangements</label>
-                                                    <input id="txtTravelArrangements" type="text" />
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkParking" value=""/>Parking</label>
-                                                    <input id="txtParking" type="text" />
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkSecurity" value=""/>Security</label>
-                                                    <input id="txtSecurity" type="text" />
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkRegistrationItem" value=""/>Registrations Items</label>
-                                                    <input id="txtRegistrationItem" type="text" />
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkSupplies" value=""/>Supplies</label>
-                                                    <input id="txtSupplies" type="text" />
+                                                    <label><asp:CheckBox ID="chkTechnologySupport" runat="server" Enabled="False"/>Technology Support</label>                                                    
+                                                    <asp:TextBox ID="txtTechnologySupport" runat="server"></asp:TextBox>
                                                 </div>
 
+                                                <div class="checkbox">
+                                                    <label><asp:CheckBox ID="chkAudioVideo" runat="server" Enabled="False"/>Audio/Video</label>                                                    
+                                                    <asp:TextBox ID="txtAudioVideo" runat="server"></asp:TextBox>
+                                                </div>
 
+                                                <div class="checkbox">
+                                                    <label><asp:CheckBox ID="chkDecorations" runat="server" Enabled="False"/>Decortations</label>                                                    
+                                                    <asp:TextBox ID="txtDecorations" runat="server"></asp:TextBox>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <label><asp:CheckBox ID="chkPhotography" runat="server" Enabled="False"/>Photography</label>                                                    
+                                                    <asp:TextBox ID="txtPhotography" runat="server"></asp:TextBox>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <label><asp:CheckBox ID="chkTechnology" runat="server" Enabled="False"/>Technology</label>                                                    
+                                                    <asp:TextBox ID="txtTechnology" runat="server"></asp:TextBox>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <label><asp:CheckBox ID="chkGiveaway" runat="server" Enabled="False"/>Giveaways</label>                                                    
+                                                    <asp:TextBox ID="txtGiveaway" runat="server"></asp:TextBox>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <label><asp:CheckBox ID="chkTravelArrangements" runat="server" Enabled="False"/>Travel Arrangements</label>                                                    
+                                                    <asp:TextBox ID="txtTravelArrangements" runat="server"></asp:TextBox>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <label><asp:CheckBox ID="chkParking" runat="server" Enabled="False"/>Parking</label>                                                    
+                                                    <asp:TextBox ID="txtParking" runat="server"></asp:TextBox>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <label><asp:CheckBox ID="chkSecurity" runat="server" Enabled="False"/>Security</label>                                                    
+                                                    <asp:TextBox ID="txtSecurity" runat="server"></asp:TextBox>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <label><asp:CheckBox ID="chkRegistrationItem" runat="server" Enabled="False"/>Registrations Items</label>                                                    
+                                                    <asp:TextBox ID="txtRegistrationItem" runat="server"></asp:TextBox>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <label><asp:CheckBox ID="chkSupplies" runat="server" Enabled="False"/>Supplies</label>                                                    
+                                                    <asp:TextBox ID="txtSupplies" runat="server"></asp:TextBox>
+                                                </div>
 
                                             </div>
                                         </div>
@@ -1046,31 +1045,30 @@
                                         </div>
                                         <div id="collapseSeven" class="panel-collapse collapse out">
                                             <div class="panel-body">
+
                                                 <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkDebriefMeeting" value=""/>Debrief meeting</label>
-                                                    <input id="txtDebriefMeeting" type="text" />
+                                                    <label><asp:CheckBox ID="chkDebriefMeeting" runat="server" Enabled="False"/>Debrief meeting</label>                                                    
+                                                    <asp:TextBox ID="txtDebriefMeeting" runat="server"></asp:TextBox>
                                                 </div>
 
                                                 <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkNotes" value=""/>Notes</label>
-                                                    <input id="txtNotes" type="text" />
+                                                    <label><asp:CheckBox ID="chkNotes" runat="server" Enabled="False"/>Notes</label>                                                    
+                                                    <asp:TextBox ID="txtNotes" runat="server"></asp:TextBox>
                                                 </div>
+
                                                 <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkInputManager" value=""/>Enter data into Event Manager</label>
-                                                    <input id="txtInputManager" type="text" />
+                                                    <label><asp:CheckBox ID="chkInputManager" runat="server" Enabled="False"/>Enter data into Event Manager</label>                                                    
+                                                    <asp:TextBox ID="txtInputManager" runat="server"></asp:TextBox>
                                                 </div>
+
                                                 <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkInputBanner" value=""/>Enter data into Banner</label>
-                                                    <input id="txtInputBanner" type="text" />
+                                                    <label><asp:CheckBox ID="chkInputBanner" runat="server" Enabled="False"/>Enter data into Banner</label>                                                    
+                                                    <asp:TextBox ID="txtInputBanner" runat="server"></asp:TextBox>
                                                 </div>
+
                                                 <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" id="chkProgramEvaluation" value=""/>Program Evaluation</label>
-                                                    <input id="txtProgramEvaluation" type="text" />
+                                                    <label><asp:CheckBox ID="chkProgramEvaluation" runat="server" Enabled="False"/>Program Evaluation</label>                                                    
+                                                    <asp:TextBox ID="txtProgramEvaluation" runat="server"></asp:TextBox>
                                                 </div>
 
                                             </div>
@@ -1104,11 +1102,11 @@
                                         <div class="panel-body">
                                             <div class="col-md-4">
                                                 <label class="control-label">Sub Event Name<span style="color: red">*</span></label>
-                                                <asp:TextBox ID="txtSubEventName" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:TextBox ID="txtSubEventName" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                             </div>
                                             <div class="col-md-4">
                                                 <label class="control-label">Start Date<span style="color: red">*</span></label>
-                                                <div class="bfh-datepicker" id="subEventStartDate"></div>
+                                                <div class="bfh-datepicker" id="subEventStartDate" ></div>
                                             </div>
                                             <div class="col-md-4">
                                                 <label class="control-label">Start Time<span style="color: red">*</span></label>
@@ -1116,7 +1114,7 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <label class="control-label">Registration URL<span style="color: red">*</span></label>
-                                                <asp:TextBox ID="txtRegistrationUrl" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:TextBox ID="txtRegistrationUrl" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                             </div>
                                             <div class="col-md-4">
                                                 <label class="control-label">End Date<span style="color: red">*</span></label>
@@ -1137,26 +1135,26 @@
                         <div class="panel-group" id="accordion10">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <asp:LinkButton ID="btnAddAdditionalOwners" runat="server" class="glyphicon glyphicon-plus pull-right"></asp:LinkButton>
+                                    <asp:LinkButton ID="btnAddAdditionalOwners" runat="server" class="glyphicon glyphicon-plus pull-right" Enabled="false"></asp:LinkButton>
                                     <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion10" href="#collapseTen">Sub Event Owner</a>
                                 </div>
                                 <div id="collapseTen" class="panel-collapse collapse out">
                                     <div class="panel-body">
                                         <div class="col-md-4">
                                             <label class="control-label">Owner First Name<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="txtOwnerFirstName" runat="server" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtOwnerFirstName" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="control-label">Owner Last Name<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="txtOwnerLastName" runat="server" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtOwnerLastName" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="control-label">E-mail<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="control-label">Phone Number<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="txtPhoneNumber" runat="server" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtPhoneNumber" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                         </div>
                                     </div>
                                 </div>
@@ -1168,38 +1166,38 @@
                         <div class="panel-group" id="accordion11">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <asp:LinkButton ID="btnAddSubEventLocation" runat="server" class="glyphicon glyphicon-plus pull-right"></asp:LinkButton>
+                                    <asp:LinkButton ID="btnAddSubEventLocation" runat="server" class="glyphicon glyphicon-plus pull-right" Enabled="false"></asp:LinkButton>
                                     <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion11" href="#collapseEleven">Sub Event Location</a>
                                 </div>
                                 <div id="collapseEleven" class="panel-collapse collapse out">
                                     <div class="panel-body">
                                         <div class="col-md-4">
                                             <label class="control-label">Street Address 1<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="txtSubStreetAddress1" runat="server" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtSubStreetAddress1" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="control-label">Street Address 2<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="txtSubStreetAddress2" runat="server" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtSubStreetAddress2" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="control-label">City<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="txtSubCity" runat="server" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtSubCity" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="control-label">State<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="txtSubState" runat="server" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtSubState" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="control-label">Zip Code<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="txtSubZipCode" runat="server" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtSubZipCode" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="control-label">Building Name<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="txtSubBuildingName" runat="server" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtSubBuildingName" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="control-label">Room Number<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="txtSubRoomNumber" runat="server" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtSubRoomNumber" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                         </div>
                                     </div>
                                 </div>
@@ -1217,41 +1215,41 @@
                                     <div class="panel-body">
                                         <div class="col-md-4">
                                             <label class="control-label">Sponsor Name<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="txtSponsorName" runat="server" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtSponsorName" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="control-label">Email<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="txtSponsorEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtSponsorEmail" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                         </div>
                                         <div class="col-md-2">
                                             <label class="control-label">University Partner?<span style="color: red">*</span></label>
-                                            <asp:RadioButtonList ID="rdbSponsorUniversityPartner" runat="server" RepeatDirection="Horizontal">
+                                            <asp:RadioButtonList ID="rdbSponsorUniversityPartner" runat="server" RepeatDirection="Horizontal" Enabled="false">
                                                 <asp:ListItem>Yes</asp:ListItem>
                                                 <asp:ListItem>No</asp:ListItem>
                                             </asp:RadioButtonList>
                                         </div>
                                         <div class="col-md-2">
                                             <label class="control-label">Add Sponsor</label><br />
-                                            <asp:LinkButton ID="btnAddSponsor" runat="server" class="glyphicon glyphicon-plus"></asp:LinkButton>
+                                            <asp:LinkButton ID="btnAddSponsor" runat="server" class="glyphicon glyphicon-plus" Enabled="false"></asp:LinkButton>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="control-label">Co-Sponsor Name<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="txtCoSponsorName" runat="server" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtCoSponsorName" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="control-label">Email<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="txtCoSponsorEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtCoSponsorEmail" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                         </div>
                                         <div class="col-md-2">
                                             <label class="control-label">University Partner?<span style="color: red">*</span></label>
-                                            <asp:RadioButtonList ID="rbnCoSponsorUniversityPartner" runat="server" RepeatDirection="Horizontal">
+                                            <asp:RadioButtonList ID="rbnCoSponsorUniversityPartner" runat="server" RepeatDirection="Horizontal" Enabled="false">
                                                 <asp:ListItem>Yes</asp:ListItem>
                                                 <asp:ListItem>No</asp:ListItem>
                                             </asp:RadioButtonList>
                                         </div>
                                         <div class="col-md-2">
                                             <label class="control-label">Add Co-Sponsor</label><br />
-                                            <asp:LinkButton ID="btnAddCoSponsor" runat="server" class="glyphicon glyphicon-plus"></asp:LinkButton>
+                                            <asp:LinkButton ID="btnAddCoSponsor" runat="server" class="glyphicon glyphicon-plus" Enabled="false"></asp:LinkButton>
                                         </div>
                                     </div>
                                 </div>
@@ -1263,30 +1261,30 @@
                         <div class="panel-group" id="accordion13">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <asp:LinkButton ID="btnAddPanelist" runat="server" class="glyphicon glyphicon-plus pull-right"></asp:LinkButton>
+                                    <asp:LinkButton ID="btnAddPanelist" runat="server" class="glyphicon glyphicon-plus pull-right" Enabled="false"></asp:LinkButton>
                                     <a data-toggle="collapse""tooltip" title="Click to Expand or Collapse" data-parent="#accordion13" href="#collapseThirteen">Sub Event Panelists</a>
                                 </div>
                                 <div id="collapseThirteen" class="panel-collapse collapse out">
                                     <div class="panel-body">
                                         <div class="col-md-4">
                                             <label class="control-label">First Name<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="txtPanelistFirstName" runat="server" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtPanelistFirstName" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="control-label">Last Name<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="txtPanelistLastName" runat="server" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtPanelistLastName" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="control-label">Email<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="txtPanelistEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtPanelistEmail" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="control-label">Phone Number<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="txtPanelistPhoneNumber" runat="server" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtPanelistPhoneNumber" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="control-label">Role<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="txtPanelistRole" runat="server" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtPanelistRole" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                         </div>
                                     </div>
                                 </div>
@@ -1356,11 +1354,11 @@
                                     <div class="panel-body">
                                         <div class="col-md-4">
                                             <label class="control-label">Order Pizza</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                                                <asp:CheckBox ID="chkPizza" runat="server" /><br />
+                                                <asp:CheckBox ID="chkPizza" runat="server" Enabled="false"/><br />
                                             <label class="control-label">Order Drinks</label>&nbsp&nbsp&nbsp&nbsp&nbsp
-                                                <asp:CheckBox ID="chkDrinks" runat="server" /><br />
+                                                <asp:CheckBox ID="chkDrinks" runat="server" Enabled="false"/><br />
                                             <label class="control-label">Order Tables</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                                                <asp:CheckBox ID="chkTables" runat="server" />
+                                                <asp:CheckBox ID="chkTables" runat="server" Enabled="false"/>
                                         </div>
                                     </div>
                                 </div>
@@ -1378,11 +1376,11 @@
                                     <div class="panel-body">
                                         <div class="col-md-4">
                                             <label class="control-label">Get Music</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                                                <asp:CheckBox ID="CheckBox1" runat="server" /><br />
+                                                <asp:CheckBox ID="CheckBox1" runat="server" Enabled="false"/><br />
                                             <label class="control-label">Contact Guest Speaker</label>&nbsp&nbsp&nbsp&nbsp&nbsp
-                                                <asp:CheckBox ID="CheckBox2" runat="server" /><br />
+                                                <asp:CheckBox ID="CheckBox2" runat="server" Enabled="false"/><br />
                                             <label class="control-label">Get Microphones</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                                                <asp:CheckBox ID="CheckBox3" runat="server" />
+                                                <asp:CheckBox ID="CheckBox3" runat="server" Enabled="false"/>
                                         </div>
                                     </div>
                                 </div>
