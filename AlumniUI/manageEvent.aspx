@@ -394,7 +394,6 @@
     }
 </script>
 <%--end of script--%>
-
 <%--script to add and remove a panel dynamically--%>
 <script>
     var $template = $(".template");
@@ -433,7 +432,7 @@
                         </li>
                         <li class="active"><a href="createEvent.aspx">Create Events</a>
                         </li>
-                        <%--<li><a href="createTask.aspx">Manage Tasks</a>
+                            <%--<li><a href="createTask.aspx">Manage Tasks</a>
                 </li>--%>
                         <li><a href="viewEvent.aspx">View Events</a>
                         </li>
@@ -450,7 +449,7 @@
             <h4>This page is to Add a New Event. Please fill in these fields below to create a new new event. Then press the Next button to go to the Sub-Event page.</h4>
 
             <div style="float:right">
-            <asp:Button ID="Button1" runat="server" Text="Edit" CssClass="btn btn-default" />
+            <asp:Button ID="btnEdit" runat="server" Text="Edit" CssClass="btn btn-default" OnClick="btnEdit_Click" />
             </div>
             <br /><br />
             <div class="panel-group" id="accordion">
@@ -505,7 +504,7 @@
                                 <div class="form-group">
                                     <label class="control-label">Event End Date<span style="color: red">*</span></label>
                                     <%--<input class="form-control" type="text" id="datepicker2" />--%>
-                                    <div class="bfh-datepicker" id="enddatepicker">
+                                    <div class="bfh-datepicker" id="enddatepicker" aria-disabled="False" aria-dropeffect="none" aria-readonly="False">
                                     </div>
                                 </div>
                             </div>
@@ -594,15 +593,15 @@
                                     <div class="panel-body">
                                         <div class="col-md-4">
                                             <label class="control-label">Sponsor Name<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="SponsorName" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
+                                            <asp:TextBox ID="txtSponsorName" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="control-label">Email<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="SponsorEmail" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
+                                            <asp:TextBox ID="txtSponsorEmail" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
                                         </div>
                                         <div class="col-md-2">
                                             <label class="control-label">University Partner?<span style="color: red">*</span></label>
-                                            <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal" Enabled="false">
+                                            <asp:RadioButtonList ID="rblSponsorUniversityPartner" runat="server" RepeatDirection="Horizontal" Enabled="false">
                                                 <asp:ListItem>Yes</asp:ListItem>
                                                 <asp:ListItem>No</asp:ListItem>
                                             </asp:RadioButtonList>
@@ -613,15 +612,15 @@
                                         </div>
                                         <div class="col-md-4">
                                             <label class="control-label">Co-Sponsor Name<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="CoSponsorName" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
+                                            <asp:TextBox ID="txtEventCoSponsorName" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="control-label">Email<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="CoSponsorEmail" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
+                                            <asp:TextBox ID="txtEventCoSponsorEmail" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
                                         </div>
                                         <div class="col-md-2">
                                             <label class="control-label">University Partner?<span style="color: red">*</span></label>
-                                            <asp:RadioButtonList ID="UniversityPartner" runat="server" RepeatDirection="Horizontal" Enabled="False">
+                                            <asp:RadioButtonList ID="rblCoSponsorUniversityPartner" runat="server" RepeatDirection="Horizontal" Enabled="False">
                                                 <asp:ListItem>Yes</asp:ListItem>
                                                 <asp:ListItem>No</asp:ListItem>
                                             </asp:RadioButtonList>
@@ -634,8 +633,7 @@
                                 </div>
                             </div>
                         </div>
-                        <%--Event Sponsor Panel Ends--%>
-
+            <%--Event Sponsor Panel Ends--%>
             <%--Event Detail panel--%>
             <div class="panel-group" id="#eventAccordion">
                 <div class="panel panel-default">
@@ -1034,7 +1032,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <%--post event panel--%>
+                             <%--post event panel--%>
                             <div class="col-md-4">
                                 <div class="panel-group" id="accordion7">
                                     <div class="panel panel-default">
@@ -1128,8 +1126,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <%--Sub Event Detail Panel Ends--%>
-                        
+                            <%--Sub Event Detail Panel Ends--%>                        
 
                         <%--Sub Event Owner Panel Starts--%>
                         <div class="panel-group" id="accordion10">
@@ -1160,8 +1157,7 @@
                                 </div>
                             </div>
                         </div>
-                        <%--Sub Event Owner Panel Ends--%>
-
+                            <%--Sub Event Owner Panel Ends--%>
                         <%--Sub Event Location Panel Starts--%>
                         <div class="panel-group" id="accordion11">
                             <div class="panel panel-default">
@@ -1203,8 +1199,7 @@
                                 </div>
                             </div>
                         </div>
-                        <%--Sub Event Location Panel Ends--%>
-
+                            <%--Sub Event Location Panel Ends--%>
                         <%--Sub Event Sponsor Panel Starts--%>
                         <div class="panel-group" id="accordion12">
                             <div class="panel panel-default">
@@ -1215,11 +1210,11 @@
                                     <div class="panel-body">
                                         <div class="col-md-4">
                                             <label class="control-label">Sponsor Name<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="txtSponsorName" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+                                            <asp:TextBox ID="txtEventSponsorName" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="control-label">Email<span style="color: red">*</span></label>
-                                            <asp:TextBox ID="txtSponsorEmail" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+                                            <asp:TextBox ID="txtEventSponsorEmail" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                         </div>
                                         <div class="col-md-2">
                                             <label class="control-label">University Partner?<span style="color: red">*</span></label>
@@ -1255,8 +1250,7 @@
                                 </div>
                             </div>
                         </div>
-                        <%--Sub Event Sponsor Panel Ends--%>
-
+                            <%--Sub Event Sponsor Panel Ends--%>
                         <%--Sub Event Panelist Panel Starts--%>
                         <div class="panel-group" id="accordion13">
                             <div class="panel panel-default">
@@ -1294,9 +1288,7 @@
                 </div>
             </div>
 
-<%--Template for adding another sub-event panel Testing--%>
- <%--Adding a Sub Event Panel--%>
-         <%-- <div class="panel-group" id="accordiontest">
+<%--Template for adding another sub-event panel Testing--%> <%--Adding a Sub Event Panel--%>         <%-- <div class="panel-group" id="accordiontest">
     <div class="panel panel-default">
         <div class="panel-heading"> <span class="glyphicon glyphicon-minus pull-right" "glyphicon glyphicon-plus pull-right"></span>
             <span class="glyphicon glyphicon-plus pull-right"></span>
@@ -1330,11 +1322,9 @@
 </div>
 <br />
 <button class="btn btn-lg btn-primary btn-add-panel"> <i class="glyphicon glyphicon-plus"></i> Add new panel</button>--%>
-
 <%--Template for adding another sub-event panel Ends--%>
         </div>
-<%--Sub Event Panelist Panel Ends--%>
-
+            <%--Sub Event Panelist Panel Ends--%>
         <%--Adding Task Panel--%>
         <div class="panel-group" id="accordion14">
             <div class="panel panel-default">
@@ -1365,7 +1355,6 @@
                             </div>
                         </div>
                         <%--End Panel For Catering--%>
-
                         <%--Start Panel for Entertainment--%>
                         <div class="panel-group" id="accordion16">
                             <div class="panel panel-default">
@@ -1376,11 +1365,11 @@
                                     <div class="panel-body">
                                         <div class="col-md-4">
                                             <label class="control-label">Get Music</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                                                <asp:CheckBox ID="CheckBox1" runat="server" Enabled="false"/><br />
+                                                <asp:CheckBox ID="chkGetMusic" runat="server" Enabled="false"/><br />
                                             <label class="control-label">Contact Guest Speaker</label>&nbsp&nbsp&nbsp&nbsp&nbsp
-                                                <asp:CheckBox ID="CheckBox2" runat="server" Enabled="false"/><br />
+                                                <asp:CheckBox ID="chkContactGuestSpeaker" runat="server" Enabled="false"/><br />
                                             <label class="control-label">Get Microphones</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                                                <asp:CheckBox ID="CheckBox3" runat="server" Enabled="false"/>
+                                                <asp:CheckBox ID="chkGetMicrophones" runat="server" Enabled="false"/>
                                         </div>
                                     </div>
                                 </div>

@@ -22,13 +22,13 @@ namespace AlumniUI {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Button1 control.
+        /// btnEdit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnEdit;
         
         /// <summary>
         /// txtEventName control.
@@ -103,31 +103,31 @@ namespace AlumniUI {
         protected global::System.Web.UI.WebControls.TextBox txtZipCode;
         
         /// <summary>
-        /// SponsorName control.
+        /// txtSponsorName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SponsorName;
+        protected global::System.Web.UI.WebControls.TextBox txtSponsorName;
         
         /// <summary>
-        /// SponsorEmail control.
+        /// txtSponsorEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SponsorEmail;
+        protected global::System.Web.UI.WebControls.TextBox txtSponsorEmail;
         
         /// <summary>
-        /// RadioButtonList1 control.
+        /// rblSponsorUniversityPartner control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
+        protected global::System.Web.UI.WebControls.RadioButtonList rblSponsorUniversityPartner;
         
         /// <summary>
         /// LinkButton1 control.
@@ -139,31 +139,31 @@ namespace AlumniUI {
         protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
         
         /// <summary>
-        /// CoSponsorName control.
+        /// txtEventCoSponsorName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CoSponsorName;
+        protected global::System.Web.UI.WebControls.TextBox txtEventCoSponsorName;
         
         /// <summary>
-        /// CoSponsorEmail control.
+        /// txtEventCoSponsorEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CoSponsorEmail;
+        protected global::System.Web.UI.WebControls.TextBox txtEventCoSponsorEmail;
         
         /// <summary>
-        /// UniversityPartner control.
+        /// rblCoSponsorUniversityPartner control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList UniversityPartner;
+        protected global::System.Web.UI.WebControls.RadioButtonList rblCoSponsorUniversityPartner;
         
         /// <summary>
         /// LinkButton2 control.
@@ -1300,22 +1300,22 @@ namespace AlumniUI {
         protected global::System.Web.UI.WebControls.TextBox txtSubRoomNumber;
         
         /// <summary>
-        /// txtSponsorName control.
+        /// txtEventSponsorName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSponsorName;
+        protected global::System.Web.UI.WebControls.TextBox txtEventSponsorName;
         
         /// <summary>
-        /// txtSponsorEmail control.
+        /// txtEventSponsorEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSponsorEmail;
+        protected global::System.Web.UI.WebControls.TextBox txtEventSponsorEmail;
         
         /// <summary>
         /// rdbSponsorUniversityPartner control.
@@ -1453,30 +1453,30 @@ namespace AlumniUI {
         protected global::System.Web.UI.WebControls.CheckBox chkTables;
         
         /// <summary>
-        /// CheckBox1 control.
+        /// chkGetMusic control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox1;
+        protected global::System.Web.UI.WebControls.CheckBox chkGetMusic;
         
         /// <summary>
-        /// CheckBox2 control.
+        /// chkContactGuestSpeaker control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox2;
+        protected global::System.Web.UI.WebControls.CheckBox chkContactGuestSpeaker;
         
         /// <summary>
-        /// CheckBox3 control.
+        /// chkGetMicrophones control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox3;
+        protected global::System.Web.UI.WebControls.CheckBox chkGetMicrophones;
     }
 }
